@@ -18,11 +18,12 @@ class FirstViewController: UIViewController {
     }()
     
     private lazy var presentButton: UIButton = {
-          let button = UIButton()
-          button.setTitle("present!", for: .normal)
-          button.backgroundColor = .yellow
-          button.setTitleColor(.blue, for: .normal)
-          return button
+        let button = UIButton()
+        button.setTitle("present!", for: .normal)
+        button.backgroundColor = .yellow
+        button.setTitleColor(.blue, for: .normal)
+        button.addTarget(self, action: #selector(presentButtonTapped), for: .touchUpInside)
+        return button
         
     }()
       
@@ -31,17 +32,18 @@ class FirstViewController: UIViewController {
         button.setTitle("push!", for: .normal)
         button.backgroundColor = .yellow
         button.setTitleColor(.blue, for: .normal)
+        button.addTarget(self, action: #selector(pushButtonTapped), for: .touchUpInside)
         return button
         
     }()
     
     private let nameTextField: UITextField = {
-            let textField = UITextField()
-            textField.placeholder = "이름을 입력해주세요"
-            textField.clearButtonMode = .whileEditing
-            textField.layer.borderColor = UIColor.gray.cgColor
-            textField.layer.borderWidth = 1
-            return textField
+        let textField = UITextField()
+        textField.placeholder = "이름을 입력해주세요"
+        textField.clearButtonMode = .whileEditing
+        textField.layer.borderColor = UIColor.gray.cgColor
+        textField.layer.borderWidth = 1
+        return textField
         
     }()
 
@@ -88,5 +90,26 @@ private extension FirstViewController {
                                      pushButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      pushButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      pushButton.heightAnchor.constraint(equalToConstant: 48)])
+    }
+    
+    func presentToSecondViewController(){
+        let secondViewController = SecondViewController()
+        secondViewController.modalPresentationStyle = .fullScreen
+        self.present(secondViewController, animated: true)
+    }
+    
+    func pushToSecondViewController(){
+        let secondViewController = SecondViewController()
+        self.navigationController?.pushViewController(secondViewController, animated: true)
+    }
+    
+    @objc
+    func presentButtonTapped(){
+        presentToSecondViewController()
+    }
+    
+    @objc
+    func pushButtonTapped(){
+        pushToSecondViewController()
     }
 }
