@@ -40,6 +40,16 @@ class FirstViewController: UIViewController {
         
     }()
     
+    private lazy var tmiButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("just touch!", for: .normal)
+        button.backgroundColor = .systemGreen
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(tmiButtonTapped), for: .touchUpInside)
+        return button
+    }()
+    
     private let nameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "입력하기.."
@@ -71,7 +81,7 @@ private extension FirstViewController {
     func setLayout() {
         
         [nameLabel, nameTextField,
-         presentButton, pushButton].forEach {
+         presentButton, pushButton,tmiButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
             view.addSubview($0)
         }
@@ -94,6 +104,10 @@ private extension FirstViewController {
                                      pushButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      pushButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      pushButton.heightAnchor.constraint(equalToConstant: 48)])
+        NSLayoutConstraint.activate([tmiButton.topAnchor.constraint(equalTo: pushButton.bottomAnchor, constant: 20),
+                                     tmiButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+                                     tmiButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
+                                     tmiButton.heightAnchor.constraint(equalToConstant: 48)])
     }
     
     func presentToSecondViewController(){
@@ -109,6 +123,11 @@ private extension FirstViewController {
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
+    func tmiToThirdViewController(){
+        let thirdViewController = ThirdViewController()
+        self.navigationController?.pushViewController(thirdViewController, animated: true)
+    }
+    
     @objc
     func presentButtonTapped(){
         presentToSecondViewController()
@@ -117,5 +136,10 @@ private extension FirstViewController {
     @objc
     func pushButtonTapped(){
         pushToSecondViewController()
+    }
+    
+    @objc
+    func tmiButtonTapped(){
+        tmiToThirdViewController()
     }
 }
