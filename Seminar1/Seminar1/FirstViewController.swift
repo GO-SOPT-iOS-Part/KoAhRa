@@ -95,11 +95,13 @@ private extension FirstViewController {
     func presentToSecondViewController(){
         let secondViewController = SecondViewController()
         secondViewController.modalPresentationStyle = .fullScreen
+        secondViewController.name = nameTextField.text
         self.present(secondViewController, animated: true)
     }
     
     func pushToSecondViewController(){
         let secondViewController = SecondViewController()
+        secondViewController.name = nameTextField.text
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     

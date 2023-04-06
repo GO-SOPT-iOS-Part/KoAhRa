@@ -9,6 +9,8 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    var name : String?
+    
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "제 이름은요!"
@@ -30,11 +32,12 @@ class SecondViewController: UIViewController {
 
         style()
         setLayout()
+        setDataBind()
     }
 
 }
 
-private extension SecondViewController {
+extension SecondViewController {
     
     func style() {
         
@@ -65,5 +68,10 @@ private extension SecondViewController {
         }else{
             self.navigationController?.popViewController(animated: true)
         }
+    }
+    
+    func setDataBind(){
+        guard let name = self.name else { return }
+        nameLabel.text = (name=="") ? "쉿 비밀이에요" : "저는 \(name)입니다!"
     }
 }
