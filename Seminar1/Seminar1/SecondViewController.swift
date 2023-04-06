@@ -21,6 +21,7 @@ class SecondViewController: UIViewController {
         button.setTitle("뒤로가기", for: .normal)
         button.setTitleColor(.blue, for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        button.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         return button
     }()
 
@@ -55,5 +56,14 @@ private extension SecondViewController {
                                      backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
                                      backButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
                                      backButton.heightAnchor.constraint(equalToConstant: 48)])
+    }
+    
+    @objc
+    func backButtonTapped(){
+        if self.navigationController == nil{
+            self.dismiss(animated: true, completion: nil)
+        }else{
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }
