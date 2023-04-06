@@ -11,8 +11,9 @@ class FirstViewController: UIViewController {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.text = "솝트에 오신 여러분 환영합니다!"
-        label.textColor = .blue
+        label.text = "이름을 알려주세요!"
+        label.textColor = .black
+        label.textAlignment = .center
         return label
         
     }()
@@ -20,8 +21,9 @@ class FirstViewController: UIViewController {
     private lazy var presentButton: UIButton = {
         let button = UIButton()
         button.setTitle("present!", for: .normal)
-        button.backgroundColor = .yellow
-        button.setTitleColor(.blue, for: .normal)
+        button.backgroundColor = .systemGreen
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(presentButtonTapped), for: .touchUpInside)
         return button
         
@@ -30,8 +32,9 @@ class FirstViewController: UIViewController {
     private lazy var pushButton: UIButton = {
         let button = UIButton()
         button.setTitle("push!", for: .normal)
-        button.backgroundColor = .yellow
-        button.setTitleColor(.blue, for: .normal)
+        button.backgroundColor = .systemGreen
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(pushButtonTapped), for: .touchUpInside)
         return button
         
@@ -39,9 +42,10 @@ class FirstViewController: UIViewController {
     
     private let nameTextField: UITextField = {
         let textField = UITextField()
-        textField.placeholder = "이름을 입력해주세요"
+        textField.placeholder = "입력하기.."
         textField.clearButtonMode = .whileEditing
         textField.layer.borderColor = UIColor.gray.cgColor
+        textField.borderStyle = .bezel
         textField.layer.borderWidth = 1
         return textField
         
