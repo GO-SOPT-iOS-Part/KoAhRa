@@ -9,7 +9,7 @@ import UIKit
 
 final class ThirdViewController: UIViewController {
     
-    private let imageView : UIImageView={
+    private let imageView : UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "img.png")
         return imageView
