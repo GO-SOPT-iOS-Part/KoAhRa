@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+final class SecondViewController: UIViewController {
     
     var name : String?
     
@@ -39,12 +39,12 @@ class SecondViewController: UIViewController {
 
 extension SecondViewController {
     
-    func style() {
+    private func style() {
         
         view.backgroundColor = .white
     }
     
-    func setLayout(){
+    private func setLayout(){
         
         [nameLabel, backButton].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
@@ -62,7 +62,7 @@ extension SecondViewController {
     }
     
     @objc
-    func backButtonTapped(){
+    private func backButtonTapped(){
         if self.navigationController == nil{
             self.dismiss(animated: true, completion: nil)
         }else{
@@ -70,7 +70,7 @@ extension SecondViewController {
         }
     }
     
-    func setDataBind(){
+    private func setDataBind(){
         guard let name = self.name else { return }
         nameLabel.text = (name=="") ? "쉿 비밀이에요" : "저는 \(name)입니다!"
     }

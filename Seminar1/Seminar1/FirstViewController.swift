@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+final class FirstViewController: UIViewController {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
@@ -73,12 +73,12 @@ class FirstViewController: UIViewController {
 
 private extension FirstViewController {
     
-    func style() {
+    private func style() {
         
         view.backgroundColor = .white
     }
     
-    func setLayout() {
+    private func setLayout() {
         
         [nameLabel, nameTextField,
          presentButton, pushButton,tmiButton].forEach {
@@ -110,36 +110,36 @@ private extension FirstViewController {
                                      tmiButton.heightAnchor.constraint(equalToConstant: 48)])
     }
     
-    func presentToSecondViewController(){
+    private func presentToSecondViewController(){
         let secondViewController = SecondViewController()
         secondViewController.modalPresentationStyle = .fullScreen
         secondViewController.name = nameTextField.text
         self.present(secondViewController, animated: true)
     }
     
-    func pushToSecondViewController(){
+    private func pushToSecondViewController(){
         let secondViewController = SecondViewController()
         secondViewController.name = nameTextField.text
         self.navigationController?.pushViewController(secondViewController, animated: true)
     }
     
-    func tmiToThirdViewController(){
+    private func tmiToThirdViewController(){
         let thirdViewController = ThirdViewController()
         self.navigationController?.pushViewController(thirdViewController, animated: true)
     }
     
     @objc
-    func presentButtonTapped(){
+    private func presentButtonTapped(){
         presentToSecondViewController()
     }
     
     @objc
-    func pushButtonTapped(){
+    private func pushButtonTapped(){
         pushToSecondViewController()
     }
     
     @objc
-    func tmiButtonTapped(){
+    private func tmiButtonTapped(){
         tmiToThirdViewController()
     }
 }

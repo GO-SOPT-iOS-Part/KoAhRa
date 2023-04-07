@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController {
+final class ThirdViewController: UIViewController {
     
     private let imageView : UIImageView={
         let imageView = UIImageView()
@@ -27,12 +27,12 @@ class ThirdViewController: UIViewController {
 
 extension ThirdViewController{
     
-    func style() {
+    private func style() {
         
         view.backgroundColor = .white
     }
     
-    func setLayout(){
+    private func setLayout(){
         
         [imageView].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
