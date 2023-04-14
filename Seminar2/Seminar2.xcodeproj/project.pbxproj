@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A412140429E9107100BFBA3A /* FirstViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412140329E9107100BFBA3A /* FirstViewController_DelegatePattern.swift */; };
+		A412140629E9120C00BFBA3A /* SecondViewController_DelegatePattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412140529E9120C00BFBA3A /* SecondViewController_DelegatePattern.swift */; };
 		A4BFA5C929E3D5AC0058D9E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFA5C829E3D5AC0058D9E6 /* AppDelegate.swift */; };
 		A4BFA5CB29E3D5AC0058D9E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFA5CA29E3D5AC0058D9E6 /* SceneDelegate.swift */; };
 		A4BFA5CD29E3D5AC0058D9E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BFA5CC29E3D5AC0058D9E6 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A412140329E9107100BFBA3A /* FirstViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController_DelegatePattern.swift; sourceTree = "<group>"; };
+		A412140529E9120C00BFBA3A /* SecondViewController_DelegatePattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController_DelegatePattern.swift; sourceTree = "<group>"; };
 		A4BFA5C529E3D5AC0058D9E6 /* Seminar2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seminar2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4BFA5C829E3D5AC0058D9E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4BFA5CA29E3D5AC0058D9E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				A4BFA5D129E3D5AD0058D9E6 /* Assets.xcassets */,
 				A4BFA5D329E3D5AD0058D9E6 /* LaunchScreen.storyboard */,
 				A4BFA5D629E3D5AD0058D9E6 /* Info.plist */,
+				A412140329E9107100BFBA3A /* FirstViewController_DelegatePattern.swift */,
+				A412140529E9120C00BFBA3A /* SecondViewController_DelegatePattern.swift */,
 			);
 			path = Seminar2;
 			sourceTree = "<group>";
@@ -141,6 +147,8 @@
 				A4BFA5CD29E3D5AC0058D9E6 /* ViewController.swift in Sources */,
 				A4BFA5C929E3D5AC0058D9E6 /* AppDelegate.swift in Sources */,
 				A4BFA5CB29E3D5AC0058D9E6 /* SceneDelegate.swift in Sources */,
+				A412140629E9120C00BFBA3A /* SecondViewController_DelegatePattern.swift in Sources */,
+				A412140429E9107100BFBA3A /* FirstViewController_DelegatePattern.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
