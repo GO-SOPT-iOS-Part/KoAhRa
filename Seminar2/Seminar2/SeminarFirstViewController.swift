@@ -67,6 +67,12 @@ extension SeminarFirstViewController{
             guard let self else {return}
             self.nameLabel.text = String(time)
         }
+        if let sheet = seminarSemniarSecondViewController.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.delegate = self
+            sheet.prefersGrabberVisible = true
+            
+        }
         self.present(seminarSemniarSecondViewController, animated: true)
     }
     
