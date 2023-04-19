@@ -7,23 +7,63 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class WelcomeViewController: UIViewController {
+    
+    private let logoView = UIImageView()
+    private let welcomeLabel = UILabel()
+    private let goMainButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUI()
+        setLayout()
+    }
 
-        // Do any additional setup after loading the view.
+}
+
+extension WelcomeViewController {
+    private func setUI(){
+        view.backgroundColor = Color.tvingBlack
+        
+        logoView.do {
+            $0.image = Image.tivingLogo
+        }
+        
+        welcomeLabel.do {
+            $0.text = "반가워용가리"
+            $0.textColor = Color.tvinggray1
+            $0.font = UIFont.pretendard(.bold, size: 23)
+        }
+        
+        goMainButton.do {
+            $0.setTitle("메인으로", for: .normal)
+            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
+            $0.setTitleColor(Color.tvingWhite, for: .normal)
+            $0.backgroundColor = Color.tvingRed
+            $0.titleLabel?.textAlignment = .center
+            $0.layer.cornerRadius = 3
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setLayout(){
+        view.addSubviews(logoView, welcomeLabel, goMainButton)
+        
+        logoView.snp.makeConstraints{
+            $0.top.equalToSuperview().inset(58)
+            $0.leading.trailing.equalToSuperview()
+        }
+        welcomeLabel.snp.makeConstraints{
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(logoView.snp.bottom).offset(67)
+        }
+        goMainButton.snp.makeConstraints{
+            $0.bottom.equalToSuperview().offset(-66)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(52)
+        }
     }
-    */
-
 }

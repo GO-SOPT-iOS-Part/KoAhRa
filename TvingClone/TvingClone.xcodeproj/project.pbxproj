@@ -28,6 +28,8 @@
 		A465ADC029EFDB6B005A03AB /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADBF29EFDB6B005A03AB /* UITextField+.swift */; };
 		A465ADC229EFE3BD005A03AB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADC129EFE3BD005A03AB /* UIView+.swift */; };
 		A465ADC429F01DF8005A03AB /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADC329F01DF8005A03AB /* UIButton+.swift */; };
+		A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */; };
+		A4A33E8B29F058B900D70A5F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4A33E8A29F058B900D70A5F /* Pretendard-Bold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		A465ADBF29EFDB6B005A03AB /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		A465ADC129EFE3BD005A03AB /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A465ADC329F01DF8005A03AB /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A4A33E8A29F058B900D70A5F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Bold.otf"; path = "../../../../../../../Downloads/Pretendard-1-2/public/static/Pretendard-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		A465AD9A29EFC565005A03AB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A4A33E8729F0575E00D70A5F /* Welcome */,
 				A465ADB329EFD5F2005A03AB /* SignIn */,
 				A4394FAD29EFC36600F2F0E0 /* ViewController.swift */,
 			);
@@ -174,6 +179,7 @@
 		A465ADA829EFD183005A03AB /* Pretendard */ = {
 			isa = PBXGroup;
 			children = (
+				A4A33E8A29F058B900D70A5F /* Pretendard-Bold.otf */,
 				A465ADAB29EFD196005A03AB /* Pretendard-Medium.otf */,
 				A465ADA929EFD196005A03AB /* Pretendard-Regular.otf */,
 				A465ADAA29EFD196005A03AB /* Pretendard-SemiBold.otf */,
@@ -187,6 +193,14 @@
 				A465ADB429EFD604005A03AB /* SignInViewController.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A4A33E8729F0575E00D70A5F /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +278,7 @@
 				A465ADAD29EFD196005A03AB /* Pretendard-SemiBold.otf in Resources */,
 				A465ADB229EFD214005A03AB /* Image.xcassets in Resources */,
 				A4394FB329EFC36700F2F0E0 /* Assets.xcassets in Resources */,
+				A4A33E8B29F058B900D70A5F /* Pretendard-Bold.otf in Resources */,
 				A4394FB129EFC36600F2F0E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +292,7 @@
 			files = (
 				A465ADB529EFD604005A03AB /* SignInViewController.swift in Sources */,
 				A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */,
+				A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */,
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
 				A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */,
 				A465ADA529EFD080005A03AB /* Color.swift in Sources */,
