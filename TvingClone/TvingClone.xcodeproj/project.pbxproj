@@ -21,6 +21,13 @@
 		A465ADAE29EFD196005A03AB /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A465ADAB29EFD196005A03AB /* Pretendard-Medium.otf */; };
 		A465ADB029EFD1B8005A03AB /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADAF29EFD1B8005A03AB /* UIFont+.swift */; };
 		A465ADB229EFD214005A03AB /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A465ADB129EFD214005A03AB /* Image.xcassets */; };
+		A465ADB529EFD604005A03AB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADB429EFD604005A03AB /* SignInViewController.swift */; };
+		A465ADB829EFDA2B005A03AB /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A465ADB729EFDA2B005A03AB /* Then */; };
+		A465ADBB29EFDA33005A03AB /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = A465ADBA29EFDA33005A03AB /* Inject */; };
+		A465ADBE29EFDA3E005A03AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A465ADBD29EFDA3E005A03AB /* SnapKit */; };
+		A465ADC029EFDB6B005A03AB /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADBF29EFDB6B005A03AB /* UITextField+.swift */; };
+		A465ADC229EFE3BD005A03AB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADC129EFE3BD005A03AB /* UIView+.swift */; };
+		A465ADC429F01DF8005A03AB /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADC329F01DF8005A03AB /* UIButton+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,10 @@
 		A465ADAB29EFD196005A03AB /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Medium.otf"; path = "../../../../../../../Downloads/Pretendard-1-2/public/static/Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		A465ADAF29EFD1B8005A03AB /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		A465ADB129EFD214005A03AB /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		A465ADB429EFD604005A03AB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A465ADBF29EFDB6B005A03AB /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
+		A465ADC129EFE3BD005A03AB /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		A465ADC329F01DF8005A03AB /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A465ADBE29EFDA3E005A03AB /* SnapKit in Frameworks */,
+				A465ADB829EFDA2B005A03AB /* Then in Frameworks */,
+				A465ADBB29EFDA33005A03AB /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,7 @@
 		A465AD9A29EFC565005A03AB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A465ADB329EFD5F2005A03AB /* SignIn */,
 				A4394FAD29EFC36600F2F0E0 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -140,6 +155,9 @@
 			isa = PBXGroup;
 			children = (
 				A465ADAF29EFD1B8005A03AB /* UIFont+.swift */,
+				A465ADBF29EFDB6B005A03AB /* UITextField+.swift */,
+				A465ADC129EFE3BD005A03AB /* UIView+.swift */,
+				A465ADC329F01DF8005A03AB /* UIButton+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -163,6 +181,14 @@
 			path = Pretendard;
 			sourceTree = "<group>";
 		};
+		A465ADB329EFD5F2005A03AB /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A465ADB429EFD604005A03AB /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +205,11 @@
 			dependencies = (
 			);
 			name = TvingClone;
+			packageProductDependencies = (
+				A465ADB729EFDA2B005A03AB /* Then */,
+				A465ADBA29EFDA33005A03AB /* Inject */,
+				A465ADBD29EFDA3E005A03AB /* SnapKit */,
+			);
 			productName = TvingClone;
 			productReference = A4394FA629EFC36600F2F0E0 /* TvingClone.app */;
 			productType = "com.apple.product-type.application";
@@ -207,6 +238,11 @@
 				Base,
 			);
 			mainGroup = A4394F9D29EFC36600F2F0E0;
+			packageReferences = (
+				A465ADB629EFDA2B005A03AB /* XCRemoteSwiftPackageReference "Then" */,
+				A465ADB929EFDA33005A03AB /* XCRemoteSwiftPackageReference "Inject" */,
+				A465ADBC29EFDA3E005A03AB /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = A4394FA729EFC36600F2F0E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,12 +275,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A465ADB529EFD604005A03AB /* SignInViewController.swift in Sources */,
 				A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */,
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
 				A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */,
 				A465ADA529EFD080005A03AB /* Color.swift in Sources */,
 				A465ADB029EFD1B8005A03AB /* UIFont+.swift in Sources */,
+				A465ADC229EFE3BD005A03AB /* UIView+.swift in Sources */,
 				A4394FAC29EFC36600F2F0E0 /* SceneDelegate.swift in Sources */,
+				A465ADC029EFDB6B005A03AB /* UITextField+.swift in Sources */,
+				A465ADC429F01DF8005A03AB /* UIButton+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +500,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A465ADB629EFDA2B005A03AB /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A465ADB929EFDA33005A03AB /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		A465ADBC29EFDA3E005A03AB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A465ADB729EFDA2B005A03AB /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A465ADB629EFDA2B005A03AB /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		A465ADBA29EFDA33005A03AB /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A465ADB929EFDA33005A03AB /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+		A465ADBD29EFDA3E005A03AB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A465ADBC29EFDA3E005A03AB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4394F9E29EFC36600F2F0E0 /* Project object */;
 }
