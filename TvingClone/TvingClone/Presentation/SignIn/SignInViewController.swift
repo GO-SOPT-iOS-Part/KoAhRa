@@ -90,6 +90,12 @@ extension SignInViewController {
         
         signInButton.do {
             $0.setTitle("로그인하기", for: .normal)
+            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
+            $0.setTitleColor(Color.tvinggray4, for: .normal)
+            $0.layer.borderColor = Color.tvinggray4.cgColor
+            $0.layer.borderWidth = 1
+            $0.layer.cornerRadius = 3
+            $0.isEnabled = false
         }
         
         idFindButton.do {
@@ -239,6 +245,18 @@ extension SignInViewController {
         }
     }
     
+    private func loginButtonActive() {
+        if signInButton.isEnabled == true {
+            signInButton.backgroundColor = Color.tvingRed
+            signInButton.setTitleColor(Color.tvingWhite, for: .normal)
+            signInButton.layer.borderWidth = 0
+        } else {
+            signInButton.setTitleColor(Color.tvinggray4, for: .normal)
+            signInButton.backgroundColor = Color.tvingBlack
+            signInButton.layer.borderWidth = 1
+        }
+    }
+    
 }
 
 extension SignInViewController : UITextFieldDelegate {
@@ -250,6 +268,13 @@ extension SignInViewController : UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         textFieldButtonSetting(textField: textField)
+        if idTextField.hasText && passwordTextField.hasText {
+            signInButton.isEnabled = true
+            loginButtonActive()
+        } else {
+            signInButton.isEnabled = false
+            loginButtonActive()
+        }
         return true
         
     }
