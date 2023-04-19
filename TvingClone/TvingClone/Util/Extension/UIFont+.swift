@@ -12,6 +12,7 @@ extension UIFont {
         case medium = "Medium"
         case regular = "Regular"
         case semibold = "SemiBold"
+        case bold = "Bold"
     }
 
     static func pretendard(_ type: pretendardType, size: CGFloat) -> UIFont {
