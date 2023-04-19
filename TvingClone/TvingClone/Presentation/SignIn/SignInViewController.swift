@@ -76,6 +76,7 @@ extension SignInViewController {
             $0.layer.cornerRadius = 3
             $0.autocapitalizationType = .none
             $0.setLeftPaddingPoints(22)
+            $0.isSecureTextEntry = true
         }
         
         passwordClearButton.do {
