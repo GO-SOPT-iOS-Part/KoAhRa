@@ -141,6 +141,7 @@ extension SignInViewController {
                      for: .touchUpInside)
         passwordClearButton.addTarget(self, action: #selector(passwordClearButtonTapped), for: .touchUpInside)
         passwordSecurityButton.addTarget(self, action: #selector(passwordSecurityButtonTapped), for: .touchUpInside)
+        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
     }
     
     private func setLayout() {
@@ -257,6 +258,13 @@ extension SignInViewController {
         passwordTextField.isSecureTextEntry.toggle()
     }
     
+    @objc
+    private func signInButtonTapped(){
+        let welcomeViewController = WelcomeViewController()
+        welcomeViewController.userId = idTextField.text
+        self.navigationController?.pushViewController(welcomeViewController, animated: true)
+    }
+    
     private func textFieldBorderSetting(textField: UITextField) {
         textField.layer.borderColor = Color.tvinggray2.cgColor
         textField.layer.borderWidth = 1
@@ -300,6 +308,7 @@ extension SignInViewController {
         }
     }
     
+    
 }
 
 extension SignInViewController : UITextFieldDelegate {
@@ -311,6 +320,7 @@ extension SignInViewController : UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textFieldBorderSetting(textField: textField)
+        textFieldButtonSetting(textField: textField)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

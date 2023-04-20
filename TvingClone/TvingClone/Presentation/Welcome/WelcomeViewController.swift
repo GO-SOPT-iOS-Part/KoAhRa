@@ -12,6 +12,8 @@ import Then
 
 class WelcomeViewController: UIViewController {
     
+    var userId : String?
+    
     private let logoView = UIImageView()
     private let welcomeLabel = UILabel()
     private let goMainButton = UIButton()
@@ -21,6 +23,8 @@ class WelcomeViewController: UIViewController {
         
         setUI()
         setLayout()
+        setAddTarget()
+        setDataBind()
     }
 
 }
@@ -37,6 +41,8 @@ extension WelcomeViewController {
             $0.text = "반가워용가리"
             $0.textColor = Color.tvinggray1
             $0.font = UIFont.pretendard(.bold, size: 23)
+            $0.textAlignment = .center
+            $0.numberOfLines = 2
         }
         
         goMainButton.do {
@@ -65,5 +71,26 @@ extension WelcomeViewController {
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(52)
         }
+    }
+    
+    private func setAddTarget(){
+        goMainButton.addTarget(self,
+                               action: #selector(goMainButtonTapped),
+                               for: .touchUpInside)
+    }
+    
+    @objc
+    private func goMainButtonTapped(){
+        if self.navigationController == nil{
+            self.dismiss(animated: true, completion: nil)
+        }else{
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    private func setDataBind(){
+        guard let userId = self.userId else {return}
+        welcomeLabel.text = "\(userId)님 \n반가워요!"
+        
     }
 }
