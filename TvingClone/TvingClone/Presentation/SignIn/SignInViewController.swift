@@ -14,10 +14,10 @@ class SignInViewController: UIViewController {
     private let backButton = UIButton()
     private let signInLabel = UILabel()
     private let idTextField = UITextField()
-    private let idClearButton = UIButton()
+    private lazy var idClearButton = UIButton()
     private let passwordTextField = UITextField()
-    private let passwordClearButton = UIButton()
-    private let passwordSecurityButton = UIButton()
+    private lazy var passwordClearButton = UIButton()
+    private lazy var passwordSecurityButton = UIButton()
     private let signInButton = UIButton()
     private let idFindButton = UIButton()
     private let betweenView = UIView()
@@ -31,6 +31,7 @@ class SignInViewController: UIViewController {
         setUI()
         setLayout()
         setDelegate()
+        setTarget()
     }
     
 }
@@ -58,6 +59,8 @@ extension SignInViewController {
             $0.font = UIFont.pretendard(.semibold, size: 15)
             $0.textColor = Color.tvinggray2
             $0.layer.cornerRadius = 3
+            $0.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 0))
+            $0.rightViewMode = .always
             $0.autocapitalizationType = .none
             $0.setLeftPaddingPoints(22)
         }
@@ -76,6 +79,8 @@ extension SignInViewController {
             $0.layer.cornerRadius = 3
             $0.autocapitalizationType = .none
             $0.setLeftPaddingPoints(22)
+            $0.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 0))
+            $0.rightViewMode = .always
             $0.isSecureTextEntry = true
         }
         
@@ -129,6 +134,15 @@ extension SignInViewController {
         }
     }
     
+    private func setTarget(){
+        idClearButton
+            .addTarget(self,
+                     action: #selector(idClearButtonTapped),
+                     for: .touchUpInside)
+        passwordClearButton.addTarget(self, action: #selector(passwordClearButtonTapped), for: .touchUpInside)
+        passwordSecurityButton.addTarget(self, action: #selector(passwordSecurityButtonTapped), for: .touchUpInside)
+    }
+    
     private func setLayout() {
         view.addSubviews(backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton)
         idTextField.addSubview(idClearButton)
@@ -152,7 +166,7 @@ extension SignInViewController {
         
         idClearButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.width.height.equalTo(20)
+            $0.height.equalTo(20)
             $0.trailing.equalToSuperview().offset(-20)
         }
         
@@ -218,6 +232,31 @@ extension SignInViewController {
         passwordTextField.delegate = self
     }
     
+    @objc
+    private func idClearButtonTapped(){
+        idTextField.text?.removeAll()
+        idClearButton.isHidden = true
+        signInButton.isEnabled = false
+        textFieldButtonSetting(textField: idTextField)
+        signInButtonActive()
+    }
+    
+    
+    @objc
+    private func passwordClearButtonTapped(){
+        passwordTextField.text?.removeAll()
+        passwordClearButton.isHidden = true
+        passwordSecurityButton.isHidden = true
+        signInButton.isEnabled = false
+        textFieldButtonSetting(textField: passwordTextField)
+        signInButtonActive()
+    }
+    
+    @objc
+    private func passwordSecurityButtonTapped(){
+        passwordTextField.isSecureTextEntry.toggle()
+    }
+    
     private func textFieldBorderSetting(textField: UITextField) {
         textField.layer.borderColor = Color.tvinggray2.cgColor
         textField.layer.borderWidth = 1
@@ -225,19 +264,22 @@ extension SignInViewController {
     }
     
     private func textFieldButtonSetting(textField: UITextField) {
+        guard let text = textField.text else {return}
         switch textField
         {
         case idTextField:
-            if idTextField.hasText && idTextField.isEditing{
+            if !text.isEmpty && idTextField.isEditing{
                 idClearButton.isHidden = false
             }else {
+                idTextField.placeholder = "아이디"
                 idClearButton.isHidden = true
             }
         case passwordTextField:
-            if passwordTextField.hasText && passwordTextField.isEditing {
+            if !text.isEmpty && passwordTextField.isEditing {
                 passwordClearButton.isHidden = false
                 passwordSecurityButton.isHidden = false
             } else {
+                passwordTextField.placeholder = "비밀번호"
                 passwordClearButton.isHidden = true
                 passwordSecurityButton.isHidden = true
             }
@@ -246,7 +288,7 @@ extension SignInViewController {
         }
     }
     
-    private func loginButtonActive() {
+    private func signInButtonActive() {
         if signInButton.isEnabled == true {
             signInButton.backgroundColor = Color.tvingRed
             signInButton.setTitleColor(Color.tvingWhite, for: .normal)
@@ -262,22 +304,35 @@ extension SignInViewController {
 
 extension SignInViewController : UITextFieldDelegate {
     
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textFieldButtonSetting(textField: textField)
+        return true
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textFieldBorderSetting(textField: textField)
-        textFieldButtonSetting(textField: textField)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        textFieldButtonSetting(textField: textField)
         if idTextField.hasText && passwordTextField.hasText {
+            textFieldButtonSetting(textField: textField)
             signInButton.isEnabled = true
-            loginButtonActive()
+            signInButtonActive()
         } else {
+            textFieldButtonSetting(textField: textField)
             signInButton.isEnabled = false
-            loginButtonActive()
+            signInButtonActive()
         }
         return true
         
+    }
+    
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        let text = idTextField.text
+        if text == "" {
+            idClearButton.isHidden = true
+        }
+        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
