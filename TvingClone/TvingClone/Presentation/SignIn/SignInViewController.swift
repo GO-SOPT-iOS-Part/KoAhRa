@@ -297,7 +297,7 @@ extension SignInViewController {
     }
     
     private func signInButtonActive() {
-        if signInButton.isEnabled == true {
+        if signInButton.isEnabled {
             signInButton.backgroundColor = Color.tvingRed
             signInButton.setTitleColor(Color.tvingWhite, for: .normal)
             signInButton.layer.borderWidth = 0
