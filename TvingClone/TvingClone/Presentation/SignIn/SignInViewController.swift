@@ -261,8 +261,8 @@ extension SignInViewController {
     @objc
     private func signInButtonTapped(){
         let welcomeViewController = WelcomeViewController()
-        guard let text = idTextField.text else {return}
-        welcomeViewController.setDataBind(userId: text)
+        guard let userId = idTextField.text else { return }
+        welcomeViewController.setDataBind(userId: userId)
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
     

@@ -12,8 +12,6 @@ import Then
 
 class WelcomeViewController: UIViewController {
     
-    private var userId : String?
-    
     private let logoView = UIImageView()
     private let welcomeLabel = UILabel()
     private let goMainButton = UIButton()
