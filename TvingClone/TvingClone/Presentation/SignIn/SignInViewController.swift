@@ -261,7 +261,8 @@ extension SignInViewController {
     @objc
     private func signInButtonTapped(){
         let welcomeViewController = WelcomeViewController()
-        welcomeViewController.userId = idTextField.text
+        guard let text = idTextField.text else {return}
+        welcomeViewController.setDataBind(userId: text)
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
     }
     
@@ -339,7 +340,7 @@ extension SignInViewController : UITextFieldDelegate {
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         let text = idTextField.text
-        if text == "" {
+        if ((text?.isEmpty) != nil) {
             idClearButton.isHidden = true
         }
         return true

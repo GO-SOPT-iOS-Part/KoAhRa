@@ -12,7 +12,7 @@ import Then
 
 class WelcomeViewController: UIViewController {
     
-    var userId : String?
+    private var userId : String?
     
     private let logoView = UIImageView()
     private let welcomeLabel = UILabel()
@@ -24,7 +24,6 @@ class WelcomeViewController: UIViewController {
         setUI()
         setLayout()
         setAddTarget()
-        setDataBind()
     }
 
 }
@@ -38,7 +37,6 @@ extension WelcomeViewController {
         }
         
         welcomeLabel.do {
-            $0.text = "반가워용가리"
             $0.textColor = Color.tvinggray1
             $0.font = UIFont.pretendard(.bold, size: 23)
             $0.textAlignment = .center
@@ -88,8 +86,7 @@ extension WelcomeViewController {
         }
     }
     
-    private func setDataBind(){
-        guard let userId = self.userId else {return}
+    func setDataBind(userId : String){
         welcomeLabel.text = "\(userId)님 \n반가워요!"
         
     }
