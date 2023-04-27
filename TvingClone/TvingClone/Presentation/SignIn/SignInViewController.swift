@@ -337,7 +337,7 @@ extension SignInViewController : UITextFieldDelegate {
         textFieldButtonSetting(textField: textField)
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
         if idTextField.hasText && passwordTextField.hasText {
             textFieldButtonSetting(textField: textField)
             signInButton.isEnabled = true
@@ -347,8 +347,6 @@ extension SignInViewController : UITextFieldDelegate {
             signInButton.isEnabled = false
             signInButtonActive()
         }
-        return true
-        
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
