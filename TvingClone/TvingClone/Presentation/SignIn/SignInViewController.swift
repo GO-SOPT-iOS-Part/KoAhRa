@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, UISheetPresentationControllerDelegate {
     
     private let backButton = UIButton()
     private let signInLabel = UILabel()
@@ -23,7 +23,7 @@ class SignInViewController: UIViewController {
     private let betweenView = UIView()
     private let passwordFindButton = UIButton()
     private let accountLabel = UILabel()
-    private let createButton = UIButton()
+    private let createNicknameButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -126,7 +126,7 @@ extension SignInViewController {
             $0.font = UIFont.pretendard(.semibold, size: 14)
         }
         
-        createButton.do {
+        createNicknameButton.do {
             $0.setTitle("닉네임 만들러가기", for: .normal)
             $0.titleLabel?.font = UIFont.pretendard(.regular, size: 14)
             $0.setTitleColor(Color.tvinggray2, for: .normal)
@@ -142,10 +142,11 @@ extension SignInViewController {
         passwordClearButton.addTarget(self, action: #selector(passwordClearButtonTapped), for: .touchUpInside)
         passwordSecurityButton.addTarget(self, action: #selector(passwordSecurityButtonTapped), for: .touchUpInside)
         signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        createNicknameButton.addTarget(self, action: #selector(createNicknameButtonTapped), for: .touchUpInside)
     }
     
     private func setLayout() {
-        view.addSubviews(backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createButton)
+        view.addSubviews(backButton, signInLabel, idTextField, passwordTextField, signInButton,idFindButton, betweenView, passwordFindButton, accountLabel, createNicknameButton)
         idTextField.addSubview(idClearButton)
         passwordTextField.addSubviews(passwordClearButton, passwordSecurityButton)
         
@@ -220,7 +221,7 @@ extension SignInViewController {
             $0.height.equalTo(22)
         }
         
-        createButton.snp.makeConstraints{
+        createNicknameButton.snp.makeConstraints{
             $0.top.equalTo(passwordFindButton.snp.bottom).offset(28)
             $0.trailing.equalToSuperview().inset(65)
             $0.height.equalTo(22)
@@ -264,6 +265,18 @@ extension SignInViewController {
         guard let userId = idTextField.text else { return }
         welcomeViewController.setDataBind(userId: userId)
         self.navigationController?.pushViewController(welcomeViewController, animated: true)
+    }
+    
+    @objc
+    private func createNicknameButtonTapped(){
+        let nicknameViewController = NicknameViewController()
+        if let sheet = nicknameViewController.sheetPresentationController {
+            sheet.detents = [.medium(), .large()]
+            sheet.delegate = self
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 50
+        }
+        self.present(nicknameViewController, animated: true)
     }
     
     private func textFieldBorderSetting(textField: UITextField) {
