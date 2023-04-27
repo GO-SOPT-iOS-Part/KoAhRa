@@ -310,6 +310,16 @@ extension SignInViewController {
         }
     }
     
+    private func emailIsValid() -> Bool{
+        guard let text = idTextField.text else { return false }
+        
+        if text.isValidEmail() {
+            return true
+        }
+        
+        return false
+    }
+    
     private func signInButtonActive() {
         if signInButton.isEnabled {
             signInButton.backgroundColor = Color.tvingRed
@@ -338,7 +348,7 @@ extension SignInViewController : UITextFieldDelegate {
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        if idTextField.hasText && passwordTextField.hasText {
+        if idTextField.hasText && passwordTextField.hasText && emailIsValid() {
             textFieldButtonSetting(textField: textField)
             signInButton.isEnabled = true
             signInButtonActive()
