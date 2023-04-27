@@ -20,6 +20,8 @@ class NicknameViewController: UIViewController {
 
         setUI()
         setLayout()
+        setTarget()
+        setDelegate()
     }
 
 }
@@ -46,8 +48,9 @@ extension NicknameViewController {
             $0.setTitle("저장하기", for: .normal)
             $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
             $0.setTitleColor(Color.tvingWhite, for: .normal)
-            $0.backgroundColor = Color.tvingRed
+            $0.backgroundColor = Color.tvinggray2
             $0.layer.cornerRadius = 12
+            $0.isEnabled = false
         }
     }
     
@@ -70,5 +73,40 @@ extension NicknameViewController {
             $0.bottom.equalToSuperview().inset(20)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
+    }
+    
+    private func setTarget() {
+        nicknameSaveButton.addTarget(self, action: #selector(nicknameSaveButtonTapped), for: .touchUpInside)
+    }
+    
+    private func setDelegate() {
+        nicknameTextField.delegate = self
+    }
+    
+    @objc
+    private func nicknameSaveButtonTapped() {
+        self.presentingViewController?.dismiss(animated: true)
+    }
+    
+    private func nicknameSaveButtonActive() {
+        if nicknameSaveButton.isEnabled {
+            nicknameSaveButton.backgroundColor = Color.tvingRed
+        } else {
+            nicknameSaveButton.backgroundColor = Color.tvinggray2
+        }
+    }
+}
+
+extension NicknameViewController : UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if nicknameTextField.hasText {
+            nicknameSaveButton.isEnabled = true
+            nicknameSaveButtonActive()
+        } else {
+            nicknameSaveButton.isEnabled = false
+            nicknameSaveButtonActive()
+        }
+        return true
     }
 }
