@@ -88,6 +88,16 @@ extension NicknameViewController {
         self.presentingViewController?.dismiss(animated: true)
     }
     
+    private func nicknameIsKorean() -> Bool {
+        guard let text = nicknameTextField.text else { return false}
+        
+        if text.isOnlyKorean() {
+            return true
+        }
+        
+        return false
+    }
+    
     private func nicknameSaveButtonActive() {
         if nicknameSaveButton.isEnabled {
             nicknameSaveButton.backgroundColor = Color.tvingRed
@@ -99,14 +109,14 @@ extension NicknameViewController {
 
 extension NicknameViewController : UITextFieldDelegate {
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if nicknameTextField.hasText {
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        
+        if nicknameTextField.hasText && nicknameIsKorean() {
             nicknameSaveButton.isEnabled = true
             nicknameSaveButtonActive()
         } else {
             nicknameSaveButton.isEnabled = false
             nicknameSaveButtonActive()
         }
-        return true
     }
 }
