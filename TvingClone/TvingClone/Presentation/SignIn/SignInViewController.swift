@@ -25,7 +25,7 @@ final class SignInViewController: UIViewController, UISheetPresentationControlle
     private let accountLabel = UILabel()
     private let createNicknameButton = UIButton()
     
-    var nickname: String = "흠"
+    var nickname: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -264,9 +264,8 @@ extension SignInViewController {
     @objc
     func signInButtonTapped(){
         let welcomeViewController = WelcomeViewController()
-        //guard let userId = idTextField.text else { return }
-        print(nickname)
-        welcomeViewController.setDataBind(userNickName: nickname)
+        guard let userId = idTextField.text else { return }
+        welcomeViewController.setDataBind(userNickName: nickname == "" ? userId : nickname)
         self.present(welcomeViewController, animated: true)
     }
     
