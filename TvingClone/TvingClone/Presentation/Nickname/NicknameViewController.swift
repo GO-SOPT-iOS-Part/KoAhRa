@@ -9,11 +9,17 @@ import UIKit
 import SnapKit
 import Then
 
-class NicknameViewController: UIViewController {
+protocol DataBindProtocol : AnyObject {
+    func dataBind(userNickName : String)
+}
+
+final class NicknameViewController: UIViewController {
     
     private let nicknameLabel = UILabel()
     private let nicknameTextField = UITextField()
     private let nicknameSaveButton = UIButton()
+    
+    weak var delegate: DataBindProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,7 +91,9 @@ extension NicknameViewController {
     
     @objc
     private func nicknameSaveButtonTapped() {
-        self.presentingViewController?.dismiss(animated: true)
+        guard let text = nicknameTextField.text else { return }
+        delegate?.dataBind(userNickName: text)
+        self.dismiss(animated: true)
     }
     
     private func nicknameIsKorean() -> Bool {

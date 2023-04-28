@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-class SignInViewController: UIViewController, UISheetPresentationControllerDelegate {
+final class SignInViewController: UIViewController, UISheetPresentationControllerDelegate {
     
     private let backButton = UIButton()
     private let signInLabel = UILabel()
@@ -24,6 +24,8 @@ class SignInViewController: UIViewController, UISheetPresentationControllerDeleg
     private let passwordFindButton = UIButton()
     private let accountLabel = UILabel()
     private let createNicknameButton = UIButton()
+    
+    var nickname: String = "흠"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -260,16 +262,18 @@ extension SignInViewController {
     }
     
     @objc
-    private func signInButtonTapped(){
+    func signInButtonTapped(){
         let welcomeViewController = WelcomeViewController()
-        guard let userId = idTextField.text else { return }
-        welcomeViewController.setDataBind(userId: userId)
-        self.navigationController?.pushViewController(welcomeViewController, animated: true)
+        //guard let userId = idTextField.text else { return }
+        print(nickname)
+        welcomeViewController.setDataBind(userNickName: nickname)
+        self.present(welcomeViewController, animated: true)
     }
     
     @objc
     private func createNicknameButtonTapped(){
         let nicknameViewController = NicknameViewController()
+        nicknameViewController.delegate = self
         if let sheet = nicknameViewController.sheetPresentationController {
             sheet.detents = [.medium(), .large()]
             sheet.delegate = self
@@ -372,4 +376,11 @@ extension SignInViewController : UITextFieldDelegate {
         textField.layer.borderWidth = 0
     }
     
+}
+
+extension SignInViewController: DataBindProtocol {
+    
+    func dataBind(userNickName: String) {
+        self.nickname = userNickName
+    }
 }

@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     
     private let logoView = UIImageView()
     private let welcomeLabel = UILabel()
@@ -84,8 +84,8 @@ extension WelcomeViewController {
         }
     }
     
-    func setDataBind(userId : String){
-        welcomeLabel.text = "\(userId)님 \n반가워요!"
+    func setDataBind(userNickName : String){
+        welcomeLabel.text = "\(userNickName)님 \n반가워요!"
         
     }
 }
