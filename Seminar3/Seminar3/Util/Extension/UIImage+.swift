@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIImage {
+extension Image {
     
-    static var productImage : UIImage { UIImage(named: "hypeBoy")! }
+    public static let productImage = UIImage(named: "hypeboy")!
 }
