@@ -15,6 +15,13 @@
 		A4093FB729FD04AE0096F326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4093FB529FD04AE0096F326 /* LaunchScreen.storyboard */; };
 		A4093FC529FD07130096F326 /* CarrotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FC429FD07130096F326 /* CarrotViewController.swift */; };
 		A4093FC729FD07310096F326 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FC629FD07310096F326 /* GalleryViewController.swift */; };
+		A4093FC929FD08840096F326 /* Carrot.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FC829FD08840096F326 /* Carrot.swift */; };
+		A4093FCC29FD0B080096F326 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4093FCB29FD0B080096F326 /* Image.xcassets */; };
+		A4093FD029FD0B5E0096F326 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FCF29FD0B5E0096F326 /* UIImage+.swift */; };
+		A4093FD329FD0DCE0096F326 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4093FD229FD0DCE0096F326 /* SnapKit */; };
+		A4093FD629FD0DD70096F326 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A4093FD529FD0DD70096F326 /* Then */; };
+		A4093FD829FD0E880096F326 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FD729FD0E880096F326 /* CarrotTableViewCell.swift */; };
+		A4093FDA29FD10320096F326 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FD929FD10320096F326 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,11 @@
 		A4093FB829FD04AE0096F326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4093FC429FD07130096F326 /* CarrotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotViewController.swift; sourceTree = "<group>"; };
 		A4093FC629FD07310096F326 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		A4093FC829FD08840096F326 /* Carrot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carrot.swift; sourceTree = "<group>"; };
+		A4093FCB29FD0B080096F326 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		A4093FCF29FD0B5E0096F326 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		A4093FD729FD0E880096F326 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
+		A4093FD929FD10320096F326 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4093FD329FD0DCE0096F326 /* SnapKit in Frameworks */,
+				A4093FD629FD0DD70096F326 /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +106,8 @@
 		A4093FC029FD054B0096F326 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				A4093FCA29FD0AF30096F326 /* AssetCatalog */,
 				A4093FB529FD04AE0096F326 /* LaunchScreen.storyboard */,
-				A4093FB329FD04AE0096F326 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -101,6 +115,8 @@
 		A4093FC129FD055C0096F326 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A4093FCD29FD0B2E0096F326 /* Extension */,
+				A4093FCE29FD0B400096F326 /* NameSpace */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -108,6 +124,8 @@
 		A4093FC229FD063B0096F326 /* Carrot */ = {
 			isa = PBXGroup;
 			children = (
+				A4093FC829FD08840096F326 /* Carrot.swift */,
+				A4093FD729FD0E880096F326 /* CarrotTableViewCell.swift */,
 				A4093FC429FD07130096F326 /* CarrotViewController.swift */,
 			);
 			path = Carrot;
@@ -119,6 +137,31 @@
 				A4093FC629FD07310096F326 /* GalleryViewController.swift */,
 			);
 			path = Gallery;
+			sourceTree = "<group>";
+		};
+		A4093FCA29FD0AF30096F326 /* AssetCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FB329FD04AE0096F326 /* Assets.xcassets */,
+				A4093FCB29FD0B080096F326 /* Image.xcassets */,
+			);
+			path = AssetCatalog;
+			sourceTree = "<group>";
+		};
+		A4093FCD29FD0B2E0096F326 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FCF29FD0B5E0096F326 /* UIImage+.swift */,
+				A4093FD929FD10320096F326 /* UIView+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A4093FCE29FD0B400096F326 /* NameSpace */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NameSpace;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +180,10 @@
 			dependencies = (
 			);
 			name = Seminar3;
+			packageProductDependencies = (
+				A4093FD229FD0DCE0096F326 /* SnapKit */,
+				A4093FD529FD0DD70096F326 /* Then */,
+			);
 			productName = Seminar3;
 			productReference = A4093FA729FD04AD0096F326 /* Seminar3.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +212,10 @@
 				Base,
 			);
 			mainGroup = A4093F9E29FD04AD0096F326;
+			packageReferences = (
+				A4093FD129FD0DCE0096F326 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A4093FD429FD0DD70096F326 /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			productRefGroup = A4093FA829FD04AD0096F326 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -180,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4093FB729FD04AE0096F326 /* LaunchScreen.storyboard in Resources */,
+				A4093FCC29FD0B080096F326 /* Image.xcassets in Resources */,
 				A4093FB429FD04AE0096F326 /* Assets.xcassets in Resources */,
 				A4093FB229FD04AD0096F326 /* Main.storyboard in Resources */,
 			);
@@ -192,10 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4093FD029FD0B5E0096F326 /* UIImage+.swift in Sources */,
 				A4093FAF29FD04AD0096F326 /* ViewController.swift in Sources */,
+				A4093FD829FD0E880096F326 /* CarrotTableViewCell.swift in Sources */,
 				A4093FAB29FD04AD0096F326 /* AppDelegate.swift in Sources */,
 				A4093FC729FD07310096F326 /* GalleryViewController.swift in Sources */,
 				A4093FAD29FD04AD0096F326 /* SceneDelegate.swift in Sources */,
+				A4093FDA29FD10320096F326 /* UIView+.swift in Sources */,
+				A4093FC929FD08840096F326 /* Carrot.swift in Sources */,
 				A4093FC529FD07130096F326 /* CarrotViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +468,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4093FD129FD0DCE0096F326 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		A4093FD429FD0DD70096F326 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4093FD229FD0DCE0096F326 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4093FD129FD0DCE0096F326 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A4093FD529FD0DD70096F326 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4093FD429FD0DD70096F326 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4093F9F29FD04AD0096F326 /* Project object */;
 }
