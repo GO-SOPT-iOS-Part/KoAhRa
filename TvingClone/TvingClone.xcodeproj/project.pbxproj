@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A4093F9929FA5FDA0096F326 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093F9829FA5FDA0096F326 /* NicknameViewController.swift */; };
 		A4093F9B29FA70680096F326 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093F9A29FA70680096F326 /* String+.swift */; };
+		A4093F9D29FCF75F0096F326 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093F9C29FCF75F0096F326 /* Font.swift */; };
 		A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FA929EFC36600F2F0E0 /* AppDelegate.swift */; };
 		A4394FAC29EFC36600F2F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FAB29EFC36600F2F0E0 /* SceneDelegate.swift */; };
 		A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FAD29EFC36600F2F0E0 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		A4093F9829FA5FDA0096F326 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		A4093F9A29FA70680096F326 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		A4093F9C29FCF75F0096F326 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		A4394FA629EFC36600F2F0E0 /* TvingClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvingClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4394FA929EFC36600F2F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4394FAB29EFC36600F2F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				A465ADA229EFD071005A03AB /* Image.swift */,
 				A465ADA429EFD080005A03AB /* Color.swift */,
+				A4093F9C29FCF75F0096F326 /* Font.swift */,
 			);
 			path = NameSpace;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				A465ADB529EFD604005A03AB /* SignInViewController.swift in Sources */,
 				A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */,
+				A4093F9D29FCF75F0096F326 /* Font.swift in Sources */,
 				A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */,
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
 				A4093F9929FA5FDA0096F326 /* NicknameViewController.swift in Sources */,

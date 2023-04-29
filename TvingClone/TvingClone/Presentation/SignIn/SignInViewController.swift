@@ -49,7 +49,7 @@ extension SignInViewController {
         
         signInLabel.do {
             $0.text = "TVING ID 로그인"
-            $0.font = UIFont.pretendard(.medium, size:23)
+            $0.font = Font.tvingMedium
             $0.textAlignment = .center
             $0.textColor = Color.tvingWhite
         }
@@ -58,7 +58,7 @@ extension SignInViewController {
             $0.placeholder = "아이디"
             $0.setPlaceholderColor(Color.tvinggray2)
             $0.backgroundColor = Color.tvinggray4
-            $0.font = UIFont.pretendard(.semibold, size: 15)
+            $0.font = Font.tvingSemiBold1
             $0.textColor = Color.tvinggray2
             $0.layer.cornerRadius = 3
             $0.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 80, height: 0))
@@ -76,7 +76,7 @@ extension SignInViewController {
             $0.placeholder = "비밀번호"
             $0.setPlaceholderColor(Color.tvinggray2)
             $0.backgroundColor = Color.tvinggray4
-            $0.font = UIFont.pretendard(.semibold, size: 15)
+            $0.font = Font.tvingSemiBold1
             $0.textColor = Color.tvinggray2
             $0.layer.cornerRadius = 3
             $0.autocapitalizationType = .none
@@ -98,7 +98,7 @@ extension SignInViewController {
         
         signInButton.do {
             $0.setTitle("로그인하기", for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
+            $0.titleLabel?.font = Font.tvingSemiBold2
             $0.setTitleColor(Color.tvinggray4, for: .normal)
             $0.layer.borderColor = Color.tvinggray4.cgColor
             $0.layer.borderWidth = 1
@@ -109,7 +109,7 @@ extension SignInViewController {
         idFindButton.do {
             $0.setTitle("아이디 찾기", for: .normal)
             $0.setTitleColor(Color.tvinggray2, for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
+            $0.titleLabel?.font = Font.tvingSemiBold2
         }
         
         betweenView.do {
@@ -119,18 +119,18 @@ extension SignInViewController {
         passwordFindButton.do {
             $0.setTitle("비밀번호 찾기", for: .normal)
             $0.setTitleColor(Color.tvinggray2, for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
+            $0.titleLabel?.font = Font.tvingSemiBold2
         }
         
         accountLabel.do {
             $0.text = "아직 계정이 없으신가요?"
             $0.textColor = Color.tvinggray3
-            $0.font = UIFont.pretendard(.semibold, size: 14)
+            $0.font = Font.tvingSemiBold2
         }
         
         createNicknameButton.do {
             $0.setTitle("닉네임 만들러가기", for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.regular, size: 14)
+            $0.titleLabel?.font = Font.tvingRegular
             $0.setTitleColor(Color.tvinggray2, for: .normal)
             $0.setUnderline()
         }

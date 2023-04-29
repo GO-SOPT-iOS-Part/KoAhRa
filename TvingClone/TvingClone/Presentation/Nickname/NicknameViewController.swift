@@ -38,21 +38,21 @@ extension NicknameViewController {
         
         nicknameLabel.do {
             $0.text = "닉네임을 입력해주세요"
-            $0.font = UIFont.pretendard(.medium, size: 23)
+            $0.font = Font.tvingMedium
         }
         
         nicknameTextField.do {
             $0.placeholder = "닉네임"
             $0.backgroundColor = Color.tvinggray2
             $0.textColor = Color.tvinggray4
-            $0.font = UIFont.pretendard(.semibold, size: 14)
+            $0.font = Font.tvingSemiBold2
             $0.layer.cornerRadius = 3
             $0.setLeftPaddingPoints(24)
         }
         
         nicknameSaveButton.do {
             $0.setTitle("저장하기", for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
+            $0.titleLabel?.font = Font.tvingSemiBold2
             $0.setTitleColor(Color.tvingWhite, for: .normal)
             $0.backgroundColor = Color.tvinggray2
             $0.layer.cornerRadius = 12

@@ -36,14 +36,14 @@ extension WelcomeViewController {
         
         welcomeLabel.do {
             $0.textColor = Color.tvinggray1
-            $0.font = UIFont.pretendard(.bold, size: 23)
+            $0.font = Font.tvingBold1
             $0.textAlignment = .center
             $0.numberOfLines = 2
         }
         
         goMainButton.do {
             $0.setTitle("메인으로", for: .normal)
-            $0.titleLabel?.font = UIFont.pretendard(.semibold, size: 14)
+            $0.titleLabel?.font = Font.tvingSemiBold2
             $0.setTitleColor(Color.tvingWhite, for: .normal)
             $0.backgroundColor = Color.tvingRed
             $0.titleLabel?.textAlignment = .center
