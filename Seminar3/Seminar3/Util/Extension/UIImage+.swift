@@ -7,6 +7,7 @@
 
 import UIKit
 
-public enum Image {
-    public static let hypeboy = UIImage(named: "hypeboy")!
+extension UIImage {
+    
+    static var productImage : UIImage { UIImage(named: "hypeBoy")! }
 }
