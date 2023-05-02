@@ -19,6 +19,11 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         cell.configureCell(dummyCase[indexPath.item])
         
+        cell.handler = { [weak self] in
+            guard let self else { return }
+            self.dummyCase[indexPath.item].heartTapped.toggle()
+        }
+        
         return cell
     }
     
@@ -26,7 +31,11 @@ class GalleryViewController: UIViewController, UICollectionViewDelegate, UIColle
     private lazy var collectionView = UICollectionView(frame: .zero,
                                                       collectionViewLayout: flowLayout)
     private let flowLayout = UICollectionViewFlowLayout()
-    private var dummyCase = Photo.dummy()
+    private var dummyCase = Photo.dummy() {
+        didSet {
+            self.collectionView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

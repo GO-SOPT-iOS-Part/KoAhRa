@@ -22,6 +22,8 @@
 		A4093FD629FD0DD70096F326 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A4093FD529FD0DD70096F326 /* Then */; };
 		A4093FD829FD0E880096F326 /* CarrotTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FD729FD0E880096F326 /* CarrotTableViewCell.swift */; };
 		A4093FDA29FD10320096F326 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FD929FD10320096F326 /* UIView+.swift */; };
+		A4093FDC2A00A3C40096F326 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FDB2A00A3C40096F326 /* Photo.swift */; };
+		A4093FDE2A00A46E0096F326 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FDD2A00A46E0096F326 /* GalleryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		A4093FCF29FD0B5E0096F326 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		A4093FD729FD0E880096F326 /* CarrotTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrotTableViewCell.swift; sourceTree = "<group>"; };
 		A4093FD929FD10320096F326 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		A4093FDB2A00A3C40096F326 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		A4093FDD2A00A46E0096F326 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 		A4093FC329FD064F0096F326 /* Gallery */ = {
 			isa = PBXGroup;
 			children = (
+				A4093FDB2A00A3C40096F326 /* Photo.swift */,
+				A4093FDD2A00A46E0096F326 /* GalleryCollectionViewCell.swift */,
 				A4093FC629FD07310096F326 /* GalleryViewController.swift */,
 			);
 			path = Gallery;
@@ -248,9 +254,11 @@
 				A4093FAF29FD04AD0096F326 /* ViewController.swift in Sources */,
 				A4093FD829FD0E880096F326 /* CarrotTableViewCell.swift in Sources */,
 				A4093FAB29FD04AD0096F326 /* AppDelegate.swift in Sources */,
+				A4093FDC2A00A3C40096F326 /* Photo.swift in Sources */,
 				A4093FC729FD07310096F326 /* GalleryViewController.swift in Sources */,
 				A4093FAD29FD04AD0096F326 /* SceneDelegate.swift in Sources */,
 				A4093FDA29FD10320096F326 /* UIView+.swift in Sources */,
+				A4093FDE2A00A46E0096F326 /* GalleryCollectionViewCell.swift in Sources */,
 				A4093FC929FD08840096F326 /* Carrot.swift in Sources */,
 				A4093FC529FD07130096F326 /* CarrotViewController.swift in Sources */,
 			);

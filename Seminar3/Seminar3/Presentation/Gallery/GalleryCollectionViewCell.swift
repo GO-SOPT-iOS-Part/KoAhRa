@@ -77,4 +77,5 @@ final class GalleryCollectionViewCell: UICollectionViewCell {
         photoImage.image = photo.image
         isTapped = photo.heartTapped
     }
+    
 }
