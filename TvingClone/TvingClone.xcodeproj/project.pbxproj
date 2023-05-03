@@ -10,6 +10,8 @@
 		A4093F9929FA5FDA0096F326 /* NicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093F9829FA5FDA0096F326 /* NicknameViewController.swift */; };
 		A4093F9B29FA70680096F326 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093F9A29FA70680096F326 /* String+.swift */; };
 		A4093F9D29FCF75F0096F326 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093F9C29FCF75F0096F326 /* Font.swift */; };
+		A4093FE12A028E780096F326 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FE02A028E780096F326 /* MainViewController.swift */; };
+		A4093FE42A02924C0096F326 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FE32A02924C0096F326 /* MyPageViewController.swift */; };
 		A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FA929EFC36600F2F0E0 /* AppDelegate.swift */; };
 		A4394FAC29EFC36600F2F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FAB29EFC36600F2F0E0 /* SceneDelegate.swift */; };
 		A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FAD29EFC36600F2F0E0 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		A4093F9829FA5FDA0096F326 /* NicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameViewController.swift; sourceTree = "<group>"; };
 		A4093F9A29FA70680096F326 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		A4093F9C29FCF75F0096F326 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		A4093FE02A028E780096F326 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A4093FE32A02924C0096F326 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		A4394FA629EFC36600F2F0E0 /* TvingClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvingClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4394FA929EFC36600F2F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4394FAB29EFC36600F2F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,22 @@
 			path = Nickname;
 			sourceTree = "<group>";
 		};
+		A4093FDF2A028E670096F326 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FE02A028E780096F326 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A4093FE22A0292310096F326 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FE32A02924C0096F326 /* MyPageViewController.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		A4394F9D29EFC36600F2F0E0 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +137,8 @@
 		A465AD9A29EFC565005A03AB /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A4093FE22A0292310096F326 /* MyPage */,
+				A4093FDF2A028E670096F326 /* Main */,
 				A4093F9729FA5FAF0096F326 /* Nickname */,
 				A4A33E8729F0575E00D70A5F /* Welcome */,
 				A465ADB329EFD5F2005A03AB /* SignIn */,
@@ -314,8 +336,10 @@
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
 				A4093F9929FA5FDA0096F326 /* NicknameViewController.swift in Sources */,
 				A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */,
+				A4093FE42A02924C0096F326 /* MyPageViewController.swift in Sources */,
 				A465ADA529EFD080005A03AB /* Color.swift in Sources */,
 				A465ADB029EFD1B8005A03AB /* UIFont+.swift in Sources */,
+				A4093FE12A028E780096F326 /* MainViewController.swift in Sources */,
 				A465ADC229EFE3BD005A03AB /* UIView+.swift in Sources */,
 				A4394FAC29EFC36600F2F0E0 /* SceneDelegate.swift in Sources */,
 				A4093F9B29FA70680096F326 /* String+.swift in Sources */,

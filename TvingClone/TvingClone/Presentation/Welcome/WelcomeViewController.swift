@@ -77,11 +77,8 @@ extension WelcomeViewController {
     
     @objc
     private func goMainButtonTapped(){
-        if self.navigationController == nil{
-            self.dismiss(animated: true, completion: nil)
-        }else{
-            self.navigationController?.popViewController(animated: true)
-        }
+        let mainViewController = MainViewController()
+        self.present(mainViewController, animated: true)
     }
     
     func setDataBind(userNickName : String){
