@@ -7,23 +7,64 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+import SnapKit
+import Then
+
+final class MainViewController: UIViewController {
+    
+    private let logoView = UIImageView()
+    private let profileButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setStyle()
+        setLayout()
+        setAddTarget()
+    }
+
+}
+
+extension MainViewController {
+    
+    private func setStyle() {
+        view.backgroundColor = Color.tvingBlack
+        
+        logoView.do {
+            $0.image = Image.tivingMainLogo
+        }
+        
+        profileButton.do {
+            $0.setImage(Image.profileLogo, for: .normal)
+        }
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setLayout() {
+        view.addSubviews(logoView, profileButton)
+        
+        logoView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(58)
+            $0.leading.equalToSuperview().inset(11)
+        }
+        
+        profileButton.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(55)
+            $0.trailing.equalToSuperview().inset(9)
+            $0.width.equalTo(33)
+            $0.height.equalTo(31)
+        }
     }
-    */
-
+    
+    private func setAddTarget(){
+        profileButton.addTarget(self,
+                               action: #selector(profileViewTapped),
+                               for: .touchUpInside)
+    }
+    
+    @objc
+    private func profileViewTapped() {
+        let myPageViewController = MyPageViewController()
+        self.present(myPageViewController, animated: true)
+    }
 }
