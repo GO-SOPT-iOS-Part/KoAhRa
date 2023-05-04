@@ -16,4 +16,5 @@ import UIKit
      public static let tvinggray2 = UIColor(named: "gray2")!
      public static let tvinggray3 = UIColor(named: "gray3")!
      public static let tvinggray4 = UIColor(named: "gray4")!
+     public static let tvinggray5 = UIColor(named: "gray5")!
  }

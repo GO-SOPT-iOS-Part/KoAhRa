@@ -12,6 +12,7 @@ import UIKit
      public static let backButtonIcon = UIImage(named: "btn_before")!
      public static let alarmButtonIcon = UIImage(named: "btn_alarm")!
      public static let settingButtonIcon = UIImage(named: "btn_setting")!
+     public static let nextButtonIcon = UIImage(named: "btn_next")!
      public static let passwordShowIcon = UIImage(named: "eye")!
      public static let passwordHideIcon = UIImage(named: "eye-slash")!
      public static let deleteIcon = UIImage(named: "x-circle")!
