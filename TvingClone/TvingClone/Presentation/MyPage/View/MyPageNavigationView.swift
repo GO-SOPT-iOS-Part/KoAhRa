@@ -47,21 +47,21 @@ extension MyPageNavigationView {
         self.addSubviews(backButton, alarmButton, settingButton)
         
         backButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(30)
+            $0.top.equalToSuperview().inset(14)
             $0.leading.equalToSuperview().inset(24)
             $0.width.equalTo(10)
             $0.height.equalTo(17)
         }
         
         alarmButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(16)
+            $0.top.equalToSuperview()
             $0.trailing.equalToSuperview().inset(67)
             $0.width.equalTo(30)
             $0.height.equalTo(42)
         }
         
         settingButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(22)
+            $0.top.equalToSuperview().inset(6)
             $0.trailing.equalToSuperview().inset(25)
             $0.width.equalTo(33)
             $0.height.equalTo(31)
