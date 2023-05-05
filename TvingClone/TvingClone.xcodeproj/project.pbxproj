@@ -12,6 +12,15 @@
 		A4093F9D29FCF75F0096F326 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093F9C29FCF75F0096F326 /* Font.swift */; };
 		A4093FE12A028E780096F326 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FE02A028E780096F326 /* MainViewController.swift */; };
 		A4093FE42A02924C0096F326 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FE32A02924C0096F326 /* MyPageViewController.swift */; };
+		A4093FE72A0294460096F326 /* MyPageNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FE62A0294460096F326 /* MyPageNavigationView.swift */; };
+		A4093FEA2A0295270096F326 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FE92A0295270096F326 /* MyPageView.swift */; };
+		A4093FEC2A02990B0096F326 /* MyPageProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FEB2A02990B0096F326 /* MyPageProfileView.swift */; };
+		A4093FEE2A029E1E0096F326 /* MyPageTicketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FED2A029E1E0096F326 /* MyPageTicketView.swift */; };
+		A4093FF02A0341A50096F326 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FEF2A0341A50096F326 /* UILabel+.swift */; };
+		A4093FF22A04077C0096F326 /* MyPageMenuUseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FF12A04077C0096F326 /* MyPageMenuUseTableViewCell.swift */; };
+		A4093FF42A040AB20096F326 /* MyPageMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FF32A040AB20096F326 /* MyPageMenuModel.swift */; };
+		A4093FFA2A0414430096F326 /* MyPageMenuNoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FF92A0414430096F326 /* MyPageMenuNoticeTableViewCell.swift */; };
+		A4093FFE2A041BB10096F326 /* MyPageMenuTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4093FFD2A041BB10096F326 /* MyPageMenuTableView.swift */; };
 		A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FA929EFC36600F2F0E0 /* AppDelegate.swift */; };
 		A4394FAC29EFC36600F2F0E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FAB29EFC36600F2F0E0 /* SceneDelegate.swift */; };
 		A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4394FAD29EFC36600F2F0E0 /* ViewController.swift */; };
@@ -33,6 +42,8 @@
 		A465ADC029EFDB6B005A03AB /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADBF29EFDB6B005A03AB /* UITextField+.swift */; };
 		A465ADC229EFE3BD005A03AB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADC129EFE3BD005A03AB /* UIView+.swift */; };
 		A465ADC429F01DF8005A03AB /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADC329F01DF8005A03AB /* UIButton+.swift */; };
+		A47640EC2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47640EB2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift */; };
+		A47640EE2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47640ED2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift */; };
 		A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */; };
 		A4A33E8B29F058B900D70A5F /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4A33E8A29F058B900D70A5F /* Pretendard-Bold.otf */; };
 /* End PBXBuildFile section */
@@ -43,6 +54,15 @@
 		A4093F9C29FCF75F0096F326 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		A4093FE02A028E780096F326 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A4093FE32A02924C0096F326 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		A4093FE62A0294460096F326 /* MyPageNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNavigationView.swift; sourceTree = "<group>"; };
+		A4093FE92A0295270096F326 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		A4093FEB2A02990B0096F326 /* MyPageProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageProfileView.swift; sourceTree = "<group>"; };
+		A4093FED2A029E1E0096F326 /* MyPageTicketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTicketView.swift; sourceTree = "<group>"; };
+		A4093FEF2A0341A50096F326 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		A4093FF12A04077C0096F326 /* MyPageMenuUseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuUseTableViewCell.swift; sourceTree = "<group>"; };
+		A4093FF32A040AB20096F326 /* MyPageMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuModel.swift; sourceTree = "<group>"; };
+		A4093FF92A0414430096F326 /* MyPageMenuNoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuNoticeTableViewCell.swift; sourceTree = "<group>"; };
+		A4093FFD2A041BB10096F326 /* MyPageMenuTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuTableView.swift; sourceTree = "<group>"; };
 		A4394FA629EFC36600F2F0E0 /* TvingClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TvingClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4394FA929EFC36600F2F0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4394FAB29EFC36600F2F0E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +83,8 @@
 		A465ADBF29EFDB6B005A03AB /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		A465ADC129EFE3BD005A03AB /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A465ADC329F01DF8005A03AB /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		A47640EB2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuUseTableFooterViewCell.swift; sourceTree = "<group>"; };
+		A47640ED2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuNoticeTableFooterViewCell.swift; sourceTree = "<group>"; };
 		A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A4A33E8A29F058B900D70A5F /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pretendard-Bold.otf"; path = "../../../../../../../Downloads/Pretendard-1-2/public/static/Pretendard-Bold.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,9 +122,51 @@
 		A4093FE22A0292310096F326 /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
-				A4093FE32A02924C0096F326 /* MyPageViewController.swift */,
+				A4093FFB2A041B4B0096F326 /* Cell */,
+				A4093FFC2A041B700096F326 /* Model */,
+				A4093FE52A0293FD0096F326 /* View */,
+				A4093FE82A0294510096F326 /* ViewController */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		A4093FE52A0293FD0096F326 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FE92A0295270096F326 /* MyPageView.swift */,
+				A4093FE62A0294460096F326 /* MyPageNavigationView.swift */,
+				A4093FEB2A02990B0096F326 /* MyPageProfileView.swift */,
+				A4093FED2A029E1E0096F326 /* MyPageTicketView.swift */,
+				A4093FFD2A041BB10096F326 /* MyPageMenuTableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4093FE82A0294510096F326 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FE32A02924C0096F326 /* MyPageViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A4093FFB2A041B4B0096F326 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FF12A04077C0096F326 /* MyPageMenuUseTableViewCell.swift */,
+				A47640EB2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift */,
+				A4093FF92A0414430096F326 /* MyPageMenuNoticeTableViewCell.swift */,
+				A47640ED2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A4093FFC2A041B700096F326 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FF32A040AB20096F326 /* MyPageMenuModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A4394F9D29EFC36600F2F0E0 = {
@@ -201,6 +265,7 @@
 				A465ADC129EFE3BD005A03AB /* UIView+.swift */,
 				A465ADC329F01DF8005A03AB /* UIButton+.swift */,
 				A4093F9A29FA70680096F326 /* String+.swift */,
+				A4093FEF2A0341A50096F326 /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -334,17 +399,28 @@
 				A4093F9D29FCF75F0096F326 /* Font.swift in Sources */,
 				A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */,
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
+				A4093FEA2A0295270096F326 /* MyPageView.swift in Sources */,
 				A4093F9929FA5FDA0096F326 /* NicknameViewController.swift in Sources */,
+				A4093FFE2A041BB10096F326 /* MyPageMenuTableView.swift in Sources */,
+				A47640EC2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift in Sources */,
 				A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */,
+				A47640EE2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift in Sources */,
+				A4093FFA2A0414430096F326 /* MyPageMenuNoticeTableViewCell.swift in Sources */,
 				A4093FE42A02924C0096F326 /* MyPageViewController.swift in Sources */,
 				A465ADA529EFD080005A03AB /* Color.swift in Sources */,
 				A465ADB029EFD1B8005A03AB /* UIFont+.swift in Sources */,
+				A4093FEE2A029E1E0096F326 /* MyPageTicketView.swift in Sources */,
+				A4093FE72A0294460096F326 /* MyPageNavigationView.swift in Sources */,
 				A4093FE12A028E780096F326 /* MainViewController.swift in Sources */,
+				A4093FF42A040AB20096F326 /* MyPageMenuModel.swift in Sources */,
 				A465ADC229EFE3BD005A03AB /* UIView+.swift in Sources */,
 				A4394FAC29EFC36600F2F0E0 /* SceneDelegate.swift in Sources */,
 				A4093F9B29FA70680096F326 /* String+.swift in Sources */,
+				A4093FF22A04077C0096F326 /* MyPageMenuUseTableViewCell.swift in Sources */,
 				A465ADC029EFDB6B005A03AB /* UITextField+.swift in Sources */,
+				A4093FF02A0341A50096F326 /* UILabel+.swift in Sources */,
 				A465ADC429F01DF8005A03AB /* UIButton+.swift in Sources */,
+				A4093FEC2A02990B0096F326 /* MyPageProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
