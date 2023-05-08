@@ -13,6 +13,10 @@
 		A4153DED2A092A7900C5C521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4153DEB2A092A7900C5C521 /* Main.storyboard */; };
 		A4153DEF2A092A7A00C5C521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4153DEE2A092A7A00C5C521 /* Assets.xcassets */; };
 		A4153DF22A092A7A00C5C521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4153DF02A092A7A00C5C521 /* LaunchScreen.storyboard */; };
+		A4153DFE2A09317200C5C521 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A4153DFD2A09317200C5C521 /* Alamofire */; };
+		A4153E012A09317C00C5C521 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A4153E002A09317C00C5C521 /* Then */; };
+		A4153E042A09319D00C5C521 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4153E032A09319D00C5C521 /* SnapKit */; };
+		A4153E072A0931AD00C5C521 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = A4153E062A0931AD00C5C521 /* Inject */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4153E042A09319D00C5C521 /* SnapKit in Frameworks */,
+				A4153DFE2A09317200C5C521 /* Alamofire in Frameworks */,
+				A4153E012A09317C00C5C521 /* Then in Frameworks */,
+				A4153E072A0931AD00C5C521 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +115,12 @@
 			dependencies = (
 			);
 			name = Seminar4;
+			packageProductDependencies = (
+				A4153DFD2A09317200C5C521 /* Alamofire */,
+				A4153E002A09317C00C5C521 /* Then */,
+				A4153E032A09319D00C5C521 /* SnapKit */,
+				A4153E062A0931AD00C5C521 /* Inject */,
+			);
 			productName = Seminar4;
 			productReference = A4153DE22A092A7900C5C521 /* Seminar4.app */;
 			productType = "com.apple.product-type.application";
@@ -135,6 +149,12 @@
 				Base,
 			);
 			mainGroup = A4153DD92A092A7900C5C521;
+			packageReferences = (
+				A4153DFC2A09317200C5C521 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				A4153DFF2A09317C00C5C521 /* XCRemoteSwiftPackageReference "Then" */,
+				A4153E022A09319D00C5C521 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				A4153E052A0931AD00C5C521 /* XCRemoteSwiftPackageReference "Inject" */,
+			);
 			productRefGroup = A4153DE32A092A7900C5C521 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -380,6 +400,64 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4153DFC2A09317200C5C521 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A4153DFF2A09317C00C5C521 /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		A4153E022A09319D00C5C521 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		A4153E052A0931AD00C5C521 /* XCRemoteSwiftPackageReference "Inject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzysztofzablocki/Inject.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4153DFD2A09317200C5C521 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4153DFC2A09317200C5C521 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		A4153E002A09317C00C5C521 /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4153DFF2A09317C00C5C521 /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		A4153E032A09319D00C5C521 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4153E022A09319D00C5C521 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		A4153E062A0931AD00C5C521 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4153E052A0931AD00C5C521 /* XCRemoteSwiftPackageReference "Inject" */;
+			productName = Inject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4153DDA2A092A7900C5C521 /* Project object */;
 }
