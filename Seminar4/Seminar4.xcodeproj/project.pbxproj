@@ -17,6 +17,11 @@
 		A4153E012A09317C00C5C521 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = A4153E002A09317C00C5C521 /* Then */; };
 		A4153E042A09319D00C5C521 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4153E032A09319D00C5C521 /* SnapKit */; };
 		A4153E072A0931AD00C5C521 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = A4153E062A0931AD00C5C521 /* Inject */; };
+		A4153E092A0932FB00C5C521 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E082A0932FB00C5C521 /* Config.swift */; };
+		A4153E0E2A0934A300C5C521 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E0D2A0934A300C5C521 /* NetworkResult.swift */; };
+		A4153E132A09357B00C5C521 /* SignUpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E122A09357B00C5C521 /* SignUpResponse.swift */; };
+		A4153E152A09358D00C5C521 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E142A09358D00C5C521 /* SignUpService.swift */; };
+		A4153E172A0935D100C5C521 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E162A0935D100C5C521 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		A4153DEE2A092A7A00C5C521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4153DF12A092A7A00C5C521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4153DF32A092A7A00C5C521 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4153E082A0932FB00C5C521 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		A4153E0D2A0934A300C5C521 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		A4153E122A09357B00C5C521 /* SignUpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponse.swift; sourceTree = "<group>"; };
+		A4153E142A09358D00C5C521 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		A4153E162A0935D100C5C521 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				A4153DFA2A092B1E00C5C521 /* Application */,
+				A4153E112A0934D400C5C521 /* Data */,
+				A4153E0A2A09345900C5C521 /* Network */,
 				A4153DF92A092B0F00C5C521 /* Presentation */,
 				A4153DFB2A092B3900C5C521 /* Resource */,
 				A4153DEB2A092A7900C5C521 /* Main.storyboard */,
@@ -77,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				A4153DE92A092A7900C5C521 /* ViewController.swift */,
+				A4153E162A0935D100C5C521 /* SignUpViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -97,6 +110,40 @@
 				A4153DF02A092A7A00C5C521 /* LaunchScreen.storyboard */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		A4153E0A2A09345900C5C521 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A4153E0B2A09347900C5C521 /* APIService */,
+				A4153E0C2A09348400C5C521 /* Foundation */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A4153E0B2A09347900C5C521 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				A4153E142A09358D00C5C521 /* SignUpService.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		A4153E0C2A09348400C5C521 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A4153E082A0932FB00C5C521 /* Config.swift */,
+				A4153E0D2A0934A300C5C521 /* NetworkResult.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A4153E112A0934D400C5C521 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A4153E122A09357B00C5C521 /* SignUpResponse.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,7 +230,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4153DEA2A092A7900C5C521 /* ViewController.swift in Sources */,
+				A4153E0E2A0934A300C5C521 /* NetworkResult.swift in Sources */,
+				A4153E172A0935D100C5C521 /* SignUpViewController.swift in Sources */,
+				A4153E152A09358D00C5C521 /* SignUpService.swift in Sources */,
+				A4153E092A0932FB00C5C521 /* Config.swift in Sources */,
 				A4153DE62A092A7900C5C521 /* AppDelegate.swift in Sources */,
+				A4153E132A09357B00C5C521 /* SignUpResponse.swift in Sources */,
 				A4153DE82A092A7900C5C521 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

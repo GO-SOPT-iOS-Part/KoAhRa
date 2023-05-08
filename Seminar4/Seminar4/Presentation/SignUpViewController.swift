@@ -7,23 +7,26 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
-
+final class SignUpViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        signUp()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func signUp() {
+        
+        SignUpService.shared.signUp(email: "ahra1234@gmail.com",
+                                    nickname: "ahra",
+                                    password: "Qwer1234*") { response in
+            switch response {
+            case .success(let data):
+                guard let data = data as? SignUpResponse else { return }
+                dump(data)
+            default:
+                return
+            }
+        }
     }
-    */
-
 }
