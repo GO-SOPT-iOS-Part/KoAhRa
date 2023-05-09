@@ -7,23 +7,23 @@
 
 import UIKit
 
-class OpenWeatherViewController: UIViewController {
+final class OpenWeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        openWeather()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func openWeather() {
+        
+        let cityName = ["gongju", "gwangju", "gumi", "gunsan", "daegu", "daejeon", "mokpo", "busan", "seosan", "seoul", "sokcho", "suwon", "suncheon", "ulsan", "iksan", "jeonju", "jeju", "cheonan", "cheongju", "chuncheon"]
+        
+        cityName.forEach {
+            OpenWeatherService.shared.openWeather(place: $0) { response in
+                print(response)
+            }
+        }
     }
-    */
 
 }
