@@ -59,4 +59,17 @@ extension UIImageView {
             }
         }
     }
+    
+    func getMovieImageFromURL(_ url: String) {
+        let movieImageURL = "https://image.tmdb.org/t/p/original/" + url
+        ImageCacheManager.getImage(movieImageURL) { result in
+            switch result {
+            case .failure(.default):
+                print("fail")
+                self.image = UIImage()
+            case .success(let image):
+                self.image = image
+            }
+        }
+    }
 }
