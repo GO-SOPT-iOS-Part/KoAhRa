@@ -27,6 +27,10 @@
 		A4153E1F2A09DFE200C5C521 /* OpenWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E1E2A09DFE200C5C521 /* OpenWeatherViewController.swift */; };
 		A4153E212A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E202A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift */; };
 		A4153E232A0BCFE200C5C521 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E222A0BCFE200C5C521 /* ImageCacheManager.swift */; };
+		A4153E252A0DDDB300C5C521 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E242A0DDDB300C5C521 /* MovieResponse.swift */; };
+		A4153E272A0DE04200C5C521 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E262A0DE04200C5C521 /* MovieService.swift */; };
+		A4153E2A2A0DE14B00C5C521 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E292A0DE14B00C5C521 /* MovieViewController.swift */; };
+		A4153E2C2A0DE29200C5C521 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E2B2A0DE29200C5C521 /* MovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		A4153E1E2A09DFE200C5C521 /* OpenWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherViewController.swift; sourceTree = "<group>"; };
 		A4153E202A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		A4153E222A0BCFE200C5C521 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		A4153E242A0DDDB300C5C521 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		A4153E262A0DE04200C5C521 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		A4153E292A0DE14B00C5C521 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		A4153E2B2A0DE29200C5C521 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,7 @@
 			children = (
 				A4153E182A09DBDA00C5C521 /* SignUp */,
 				A4153E192A09DBE800C5C521 /* OpenWeather */,
+				A4153E282A0DE13000C5C521 /* Movie */,
 				A4153DE92A092A7900C5C521 /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -137,6 +146,7 @@
 			children = (
 				A4153E142A09358D00C5C521 /* SignUpService.swift */,
 				A4153E1C2A09DD3C00C5C521 /* OpenWeatherService.swift */,
+				A4153E262A0DE04200C5C521 /* MovieService.swift */,
 			);
 			path = APIService;
 			sourceTree = "<group>";
@@ -156,6 +166,7 @@
 			children = (
 				A4153E122A09357B00C5C521 /* SignUpResponse.swift */,
 				A4153E1A2A09DCF600C5C521 /* OpenWeatherResponse.swift */,
+				A4153E242A0DDDB300C5C521 /* MovieResponse.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -175,6 +186,15 @@
 				A4153E202A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift */,
 			);
 			path = OpenWeather;
+			sourceTree = "<group>";
+		};
+		A4153E282A0DE13000C5C521 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				A4153E292A0DE14B00C5C521 /* MovieViewController.swift */,
+				A4153E2B2A0DE29200C5C521 /* MovieTableViewCell.swift */,
+			);
+			path = Movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,14 +280,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4153E2C2A0DE29200C5C521 /* MovieTableViewCell.swift in Sources */,
 				A4153DEA2A092A7900C5C521 /* ViewController.swift in Sources */,
 				A4153E0E2A0934A300C5C521 /* NetworkResult.swift in Sources */,
 				A4153E1D2A09DD3C00C5C521 /* OpenWeatherService.swift in Sources */,
+				A4153E2A2A0DE14B00C5C521 /* MovieViewController.swift in Sources */,
 				A4153E172A0935D100C5C521 /* SignUpViewController.swift in Sources */,
 				A4153E152A09358D00C5C521 /* SignUpService.swift in Sources */,
 				A4153E232A0BCFE200C5C521 /* ImageCacheManager.swift in Sources */,
 				A4153E1F2A09DFE200C5C521 /* OpenWeatherViewController.swift in Sources */,
+				A4153E252A0DDDB300C5C521 /* MovieResponse.swift in Sources */,
 				A4153E092A0932FB00C5C521 /* Config.swift in Sources */,
+				A4153E272A0DE04200C5C521 /* MovieService.swift in Sources */,
 				A4153DE62A092A7900C5C521 /* AppDelegate.swift in Sources */,
 				A4153E132A09357B00C5C521 /* SignUpResponse.swift in Sources */,
 				A4153DE82A092A7900C5C521 /* SceneDelegate.swift in Sources */,
