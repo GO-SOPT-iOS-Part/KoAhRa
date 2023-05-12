@@ -30,9 +30,7 @@ final class OpenWeatherService {
         dataRequest.responseData { response in
             switch response.result {
             case .success :
-                print(place)
                 guard let statusCode = response.response?.statusCode else { return }
-                print(statusCode)
                 guard let value = response.value else { return }
                 let networkResult = self.judgeStatus(by: statusCode, value)
                 completion(networkResult)
@@ -56,6 +54,7 @@ final class OpenWeatherService {
         let decoder = JSONDecoder()
         
         guard let decodedData = try? decoder.decode(OpenWeatherResponse.self, from: data) else { return .pathErr }
+
         
         return .success(decodedData as Any)
     }
