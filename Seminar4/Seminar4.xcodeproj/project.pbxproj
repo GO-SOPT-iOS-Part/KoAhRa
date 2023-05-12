@@ -25,6 +25,8 @@
 		A4153E1B2A09DCF600C5C521 /* OpenWeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E1A2A09DCF600C5C521 /* OpenWeatherResponse.swift */; };
 		A4153E1D2A09DD3C00C5C521 /* OpenWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E1C2A09DD3C00C5C521 /* OpenWeatherService.swift */; };
 		A4153E1F2A09DFE200C5C521 /* OpenWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E1E2A09DFE200C5C521 /* OpenWeatherViewController.swift */; };
+		A4153E212A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E202A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift */; };
+		A4153E232A0BCFE200C5C521 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E222A0BCFE200C5C521 /* ImageCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		A4153E1A2A09DCF600C5C521 /* OpenWeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherResponse.swift; sourceTree = "<group>"; };
 		A4153E1C2A09DD3C00C5C521 /* OpenWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherService.swift; sourceTree = "<group>"; };
 		A4153E1E2A09DFE200C5C521 /* OpenWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherViewController.swift; sourceTree = "<group>"; };
+		A4153E202A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherTableViewCell.swift; sourceTree = "<group>"; };
+		A4153E222A0BCFE200C5C521 /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,7 @@
 			children = (
 				A4153E082A0932FB00C5C521 /* Config.swift */,
 				A4153E0D2A0934A300C5C521 /* NetworkResult.swift */,
+				A4153E222A0BCFE200C5C521 /* ImageCacheManager.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				A4153E1E2A09DFE200C5C521 /* OpenWeatherViewController.swift */,
+				A4153E202A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift */,
 			);
 			path = OpenWeather;
 			sourceTree = "<group>";
@@ -259,11 +265,13 @@
 				A4153E1D2A09DD3C00C5C521 /* OpenWeatherService.swift in Sources */,
 				A4153E172A0935D100C5C521 /* SignUpViewController.swift in Sources */,
 				A4153E152A09358D00C5C521 /* SignUpService.swift in Sources */,
+				A4153E232A0BCFE200C5C521 /* ImageCacheManager.swift in Sources */,
 				A4153E1F2A09DFE200C5C521 /* OpenWeatherViewController.swift in Sources */,
 				A4153E092A0932FB00C5C521 /* Config.swift in Sources */,
 				A4153DE62A092A7900C5C521 /* AppDelegate.swift in Sources */,
 				A4153E132A09357B00C5C521 /* SignUpResponse.swift in Sources */,
 				A4153DE82A092A7900C5C521 /* SceneDelegate.swift in Sources */,
+				A4153E212A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift in Sources */,
 				A4153E1B2A09DCF600C5C521 /* OpenWeatherResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
