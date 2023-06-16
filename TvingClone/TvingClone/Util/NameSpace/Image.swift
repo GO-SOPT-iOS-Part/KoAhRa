@@ -23,4 +23,5 @@ import UIKit
      public static let tvnLogo = UIImage(named: "tvn_logo")!
      public static let jtbcLogo = UIImage(named: "jtbc_logo")!
      public static let profileLogo = UIImage(named: "profile")!
+     public static let poster = UIImage(named: "poster")!
  }
