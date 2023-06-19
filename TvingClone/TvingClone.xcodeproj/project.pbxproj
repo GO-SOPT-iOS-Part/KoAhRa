@@ -43,6 +43,9 @@
 		A465ADC029EFDB6B005A03AB /* UITextField+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADBF29EFDB6B005A03AB /* UITextField+.swift */; };
 		A465ADC229EFE3BD005A03AB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADC129EFE3BD005A03AB /* UIView+.swift */; };
 		A465ADC429F01DF8005A03AB /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A465ADC329F01DF8005A03AB /* UIButton+.swift */; };
+		A47402CD2A3C3BFD00C93CBE /* MainPosterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47402CC2A3C3BFD00C93CBE /* MainPosterViewCell.swift */; };
+		A47402D22A3C3D2700C93CBE /* MainPosterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47402D12A3C3D2700C93CBE /* MainPosterItem.swift */; };
+		A47402D42A3C3E5800C93CBE /* MainPosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47402D32A3C3E5800C93CBE /* MainPosterViewController.swift */; };
 		A47640EC2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47640EB2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift */; };
 		A47640EE2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47640ED2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift */; };
 		A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */; };
@@ -84,6 +87,9 @@
 		A465ADBF29EFDB6B005A03AB /* UITextField+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+.swift"; sourceTree = "<group>"; };
 		A465ADC129EFE3BD005A03AB /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A465ADC329F01DF8005A03AB /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		A47402CC2A3C3BFD00C93CBE /* MainPosterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPosterViewCell.swift; sourceTree = "<group>"; };
+		A47402D12A3C3D2700C93CBE /* MainPosterItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPosterItem.swift; sourceTree = "<group>"; };
+		A47402D32A3C3E5800C93CBE /* MainPosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPosterViewController.swift; sourceTree = "<group>"; };
 		A47640EB2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuUseTableFooterViewCell.swift; sourceTree = "<group>"; };
 		A47640ED2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuNoticeTableFooterViewCell.swift; sourceTree = "<group>"; };
 		A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -114,7 +120,8 @@
 		A4093FDF2A028E670096F326 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				A4093FE02A028E780096F326 /* MainViewController.swift */,
+				A47402CE2A3C3C2B00C93CBE /* View */,
+				A47402CB2A3C3BBE00C93CBE /* ViewController */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -199,6 +206,7 @@
 		A4394FA829EFC36600F2F0E0 /* TvingClone */ = {
 			isa = PBXGroup;
 			children = (
+				A47402CF2A3C3D0400C93CBE /* Data */,
 				A465AD9D29EFC6A0005A03AB /* Application */,
 				A465AD9A29EFC565005A03AB /* Presentation */,
 				A465AD9B29EFC5EA005A03AB /* Resource */,
@@ -289,6 +297,47 @@
 				A465ADB429EFD604005A03AB /* SignInViewController.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A47402CA2A3C3BB900C93CBE /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				A47402CC2A3C3BFD00C93CBE /* MainPosterViewCell.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		A47402CB2A3C3BBE00C93CBE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A4093FE02A028E780096F326 /* MainViewController.swift */,
+				A47402D32A3C3E5800C93CBE /* MainPosterViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A47402CE2A3C3C2B00C93CBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A47402CA2A3C3BB900C93CBE /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A47402CF2A3C3D0400C93CBE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A47402D02A3C3D0B00C93CBE /* Main */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A47402D02A3C3D0B00C93CBE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A47402D12A3C3D2700C93CBE /* MainPosterItem.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		A4A33E8729F0575E00D70A5F /* Welcome */ = {
@@ -398,6 +447,7 @@
 				A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */,
 				A4093F9D29FCF75F0096F326 /* Font.swift in Sources */,
 				A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */,
+				A47402CD2A3C3BFD00C93CBE /* MainPosterViewCell.swift in Sources */,
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
 				A4093FEA2A0295270096F326 /* MyPageView.swift in Sources */,
 				A4093F9929FA5FDA0096F326 /* NicknameViewController.swift in Sources */,
@@ -405,6 +455,7 @@
 				A47640EC2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift in Sources */,
 				A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */,
 				A47640EE2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift in Sources */,
+				A47402D22A3C3D2700C93CBE /* MainPosterItem.swift in Sources */,
 				A4093FFA2A0414430096F326 /* MyPageMenuNoticeTableViewCell.swift in Sources */,
 				A4093FE42A02924C0096F326 /* MyPageViewController.swift in Sources */,
 				A465ADA529EFD080005A03AB /* Color.swift in Sources */,
@@ -420,6 +471,7 @@
 				A465ADC029EFDB6B005A03AB /* UITextField+.swift in Sources */,
 				A4093FF02A0341A50096F326 /* UILabel+.swift in Sources */,
 				A465ADC429F01DF8005A03AB /* UIButton+.swift in Sources */,
+				A47402D42A3C3E5800C93CBE /* MainPosterViewController.swift in Sources */,
 				A4093FEC2A02990B0096F326 /* MyPageProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
