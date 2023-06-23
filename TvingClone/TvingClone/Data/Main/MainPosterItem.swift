@@ -17,6 +17,8 @@ extension MainPosterItem {
         return [
             MainPosterItem(posterImage: Image.poster),
             MainPosterItem(posterImage: Image.poster),
+            MainPosterItem(posterImage: Image.poster),
+            MainPosterItem(posterImage: Image.poster),
             MainPosterItem(posterImage: Image.poster)
         ]
     }

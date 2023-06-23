@@ -49,6 +49,8 @@
 		A47640EC2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47640EB2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift */; };
 		A47640EE2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47640ED2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift */; };
 		A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */; };
+		A4BE3F8A2A40142700CCFF5C /* MainMustSeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F892A40142700CCFF5C /* MainMustSeeViewCell.swift */; };
+		A4BE3F8C2A40151D00CCFF5C /* MainMustSeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F8B2A40151D00CCFF5C /* MainMustSeeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +95,8 @@
 		A47640EB2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuUseTableFooterViewCell.swift; sourceTree = "<group>"; };
 		A47640ED2A0498E800C4D31A /* MyPageMenuNoticeTableFooterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageMenuNoticeTableFooterViewCell.swift; sourceTree = "<group>"; };
 		A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		A4BE3F892A40142700CCFF5C /* MainMustSeeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMustSeeViewCell.swift; sourceTree = "<group>"; };
+		A4BE3F8B2A40151D00CCFF5C /* MainMustSeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMustSeeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				A47402CC2A3C3BFD00C93CBE /* MainPosterViewCell.swift */,
+				A4BE3F892A40142700CCFF5C /* MainMustSeeViewCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			children = (
 				A4093FE02A028E780096F326 /* MainViewController.swift */,
 				A47402D32A3C3E5800C93CBE /* MainPosterViewController.swift */,
+				A4BE3F8B2A40151D00CCFF5C /* MainMustSeeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -447,6 +453,7 @@
 				A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */,
 				A4093F9D29FCF75F0096F326 /* Font.swift in Sources */,
 				A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */,
+				A4BE3F8C2A40151D00CCFF5C /* MainMustSeeViewController.swift in Sources */,
 				A47402CD2A3C3BFD00C93CBE /* MainPosterViewCell.swift in Sources */,
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
 				A4093FEA2A0295270096F326 /* MyPageView.swift in Sources */,
@@ -472,6 +479,7 @@
 				A4093FF02A0341A50096F326 /* UILabel+.swift in Sources */,
 				A465ADC429F01DF8005A03AB /* UIButton+.swift in Sources */,
 				A47402D42A3C3E5800C93CBE /* MainPosterViewController.swift in Sources */,
+				A4BE3F8A2A40142700CCFF5C /* MainMustSeeViewCell.swift in Sources */,
 				A4093FEC2A02990B0096F326 /* MyPageProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
