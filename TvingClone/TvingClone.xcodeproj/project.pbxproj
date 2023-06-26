@@ -51,6 +51,9 @@
 		A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */; };
 		A4BE3F8A2A40142700CCFF5C /* MainMustSeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F892A40142700CCFF5C /* MainMustSeeViewCell.swift */; };
 		A4BE3F8C2A40151D00CCFF5C /* MainMustSeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F8B2A40151D00CCFF5C /* MainMustSeeViewController.swift */; };
+		A4BE3F8E2A495CAC00CCFF5C /* MainPopularViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F8D2A495CAC00CCFF5C /* MainPopularViewCell.swift */; };
+		A4BE3F902A49684200CCFF5C /* MainPopularItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F8F2A49684200CCFF5C /* MainPopularItem.swift */; };
+		A4BE3F922A496A0700CCFF5C /* MainPopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F912A496A0700CCFF5C /* MainPopularViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +100,9 @@
 		A4A33E8829F0577100D70A5F /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		A4BE3F892A40142700CCFF5C /* MainMustSeeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMustSeeViewCell.swift; sourceTree = "<group>"; };
 		A4BE3F8B2A40151D00CCFF5C /* MainMustSeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMustSeeViewController.swift; sourceTree = "<group>"; };
+		A4BE3F8D2A495CAC00CCFF5C /* MainPopularViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPopularViewCell.swift; sourceTree = "<group>"; };
+		A4BE3F8F2A49684200CCFF5C /* MainPopularItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPopularItem.swift; sourceTree = "<group>"; };
+		A4BE3F912A496A0700CCFF5C /* MainPopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPopularViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +314,7 @@
 			children = (
 				A47402CC2A3C3BFD00C93CBE /* MainPosterViewCell.swift */,
 				A4BE3F892A40142700CCFF5C /* MainMustSeeViewCell.swift */,
+				A4BE3F8D2A495CAC00CCFF5C /* MainPopularViewCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -318,6 +325,7 @@
 				A4093FE02A028E780096F326 /* MainViewController.swift */,
 				A47402D32A3C3E5800C93CBE /* MainPosterViewController.swift */,
 				A4BE3F8B2A40151D00CCFF5C /* MainMustSeeViewController.swift */,
+				A4BE3F912A496A0700CCFF5C /* MainPopularViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -342,6 +350,7 @@
 			isa = PBXGroup;
 			children = (
 				A47402D12A3C3D2700C93CBE /* MainPosterItem.swift */,
+				A4BE3F8F2A49684200CCFF5C /* MainPopularItem.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -454,6 +463,7 @@
 				A4093F9D29FCF75F0096F326 /* Font.swift in Sources */,
 				A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */,
 				A4BE3F8C2A40151D00CCFF5C /* MainMustSeeViewController.swift in Sources */,
+				A4BE3F8E2A495CAC00CCFF5C /* MainPopularViewCell.swift in Sources */,
 				A47402CD2A3C3BFD00C93CBE /* MainPosterViewCell.swift in Sources */,
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
 				A4093FEA2A0295270096F326 /* MyPageView.swift in Sources */,
@@ -467,9 +477,11 @@
 				A4093FE42A02924C0096F326 /* MyPageViewController.swift in Sources */,
 				A465ADA529EFD080005A03AB /* Color.swift in Sources */,
 				A465ADB029EFD1B8005A03AB /* UIFont+.swift in Sources */,
+				A4BE3F902A49684200CCFF5C /* MainPopularItem.swift in Sources */,
 				A4093FEE2A029E1E0096F326 /* MyPageTicketView.swift in Sources */,
 				A4093FE72A0294460096F326 /* MyPageNavigationView.swift in Sources */,
 				A4093FE12A028E780096F326 /* MainViewController.swift in Sources */,
+				A4BE3F922A496A0700CCFF5C /* MainPopularViewController.swift in Sources */,
 				A4093FF42A040AB20096F326 /* MyPageMenuModel.swift in Sources */,
 				A465ADC229EFE3BD005A03AB /* UIView+.swift in Sources */,
 				A4394FAC29EFC36600F2F0E0 /* SceneDelegate.swift in Sources */,
