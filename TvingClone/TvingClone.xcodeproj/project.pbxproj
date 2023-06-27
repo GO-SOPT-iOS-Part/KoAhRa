@@ -54,6 +54,9 @@
 		A4BE3F8E2A495CAC00CCFF5C /* MainPopularViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F8D2A495CAC00CCFF5C /* MainPopularViewCell.swift */; };
 		A4BE3F902A49684200CCFF5C /* MainPopularItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F8F2A49684200CCFF5C /* MainPopularItem.swift */; };
 		A4BE3F922A496A0700CCFF5C /* MainPopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F912A496A0700CCFF5C /* MainPopularViewController.swift */; };
+		A4BE3F942A498A3E00CCFF5C /* MainFreeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F932A498A3E00CCFF5C /* MainFreeViewCell.swift */; };
+		A4BE3F962A498B1400CCFF5C /* MainFreeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F952A498B1400CCFF5C /* MainFreeItem.swift */; };
+		A4BE3F982A498B6200CCFF5C /* MainFreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BE3F972A498B6200CCFF5C /* MainFreeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +106,9 @@
 		A4BE3F8D2A495CAC00CCFF5C /* MainPopularViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPopularViewCell.swift; sourceTree = "<group>"; };
 		A4BE3F8F2A49684200CCFF5C /* MainPopularItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPopularItem.swift; sourceTree = "<group>"; };
 		A4BE3F912A496A0700CCFF5C /* MainPopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPopularViewController.swift; sourceTree = "<group>"; };
+		A4BE3F932A498A3E00CCFF5C /* MainFreeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFreeViewCell.swift; sourceTree = "<group>"; };
+		A4BE3F952A498B1400CCFF5C /* MainFreeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFreeItem.swift; sourceTree = "<group>"; };
+		A4BE3F972A498B6200CCFF5C /* MainFreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFreeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +321,7 @@
 				A47402CC2A3C3BFD00C93CBE /* MainPosterViewCell.swift */,
 				A4BE3F892A40142700CCFF5C /* MainMustSeeViewCell.swift */,
 				A4BE3F8D2A495CAC00CCFF5C /* MainPopularViewCell.swift */,
+				A4BE3F932A498A3E00CCFF5C /* MainFreeViewCell.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -326,6 +333,7 @@
 				A47402D32A3C3E5800C93CBE /* MainPosterViewController.swift */,
 				A4BE3F8B2A40151D00CCFF5C /* MainMustSeeViewController.swift */,
 				A4BE3F912A496A0700CCFF5C /* MainPopularViewController.swift */,
+				A4BE3F972A498B6200CCFF5C /* MainFreeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -351,6 +359,7 @@
 			children = (
 				A47402D12A3C3D2700C93CBE /* MainPosterItem.swift */,
 				A4BE3F8F2A49684200CCFF5C /* MainPopularItem.swift */,
+				A4BE3F952A498B1400CCFF5C /* MainFreeItem.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -461,13 +470,16 @@
 				A465ADB529EFD604005A03AB /* SignInViewController.swift in Sources */,
 				A4394FAE29EFC36600F2F0E0 /* ViewController.swift in Sources */,
 				A4093F9D29FCF75F0096F326 /* Font.swift in Sources */,
+				A4BE3F942A498A3E00CCFF5C /* MainFreeViewCell.swift in Sources */,
 				A4A33E8929F0577100D70A5F /* WelcomeViewController.swift in Sources */,
+				A4BE3F982A498B6200CCFF5C /* MainFreeViewController.swift in Sources */,
 				A4BE3F8C2A40151D00CCFF5C /* MainMustSeeViewController.swift in Sources */,
 				A4BE3F8E2A495CAC00CCFF5C /* MainPopularViewCell.swift in Sources */,
 				A47402CD2A3C3BFD00C93CBE /* MainPosterViewCell.swift in Sources */,
 				A465ADA329EFD071005A03AB /* Image.swift in Sources */,
 				A4093FEA2A0295270096F326 /* MyPageView.swift in Sources */,
 				A4093F9929FA5FDA0096F326 /* NicknameViewController.swift in Sources */,
+				A4BE3F962A498B1400CCFF5C /* MainFreeItem.swift in Sources */,
 				A4093FFE2A041BB10096F326 /* MyPageMenuTableView.swift in Sources */,
 				A47640EC2A04982A00C4D31A /* MyPageMenuUseTableFooterViewCell.swift in Sources */,
 				A4394FAA29EFC36600F2F0E0 /* AppDelegate.swift in Sources */,
