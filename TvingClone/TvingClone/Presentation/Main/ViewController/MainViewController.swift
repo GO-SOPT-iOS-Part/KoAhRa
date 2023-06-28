@@ -13,11 +13,13 @@ import Then
 final class MainViewController: UIViewController {
     
     private let logoView = UIImageView()
-    private let profileButton = UIButton()
+    private lazy var profileButton = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.isHidden = true
+        
         setStyle()
         setLayout()
         setAddTarget()
@@ -55,16 +57,21 @@ extension MainViewController {
             $0.height.equalTo(31)
         }
     }
-    
+
     private func setAddTarget(){
         profileButton.addTarget(self,
-                               action: #selector(profileViewTapped),
+                                action: #selector(profileButtonTapped),
                                for: .touchUpInside)
     }
     
-    @objc
-    private func profileViewTapped() {
+    private func presentToMyPageViewController() {
         let myPageViewController = MyPageViewController()
+        myPageViewController.modalPresentationStyle = .fullScreen
         self.present(myPageViewController, animated: true)
+    }
+    
+    @objc
+    private func profileButtonTapped() {
+        presentToMyPageViewController()
     }
 }

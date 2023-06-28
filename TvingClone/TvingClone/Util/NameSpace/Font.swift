@@ -11,6 +11,7 @@ public enum Font {
     
     public static let tvingBold1 = UIFont.pretendard(.bold, size: 23)
     public static let tvingBold2 = UIFont.pretendard(.bold, size: 15)
+    public static let tvingBold3 = UIFont.pretendard(.bold, size: 19)
     public static let tvingMedium = UIFont.pretendard(.medium, size: 23)
     public static let tvingMedium2 = UIFont.pretendard(.medium, size: 17)
     public static let tvingMedium3 = UIFont.pretendard(.medium, size: 10)
