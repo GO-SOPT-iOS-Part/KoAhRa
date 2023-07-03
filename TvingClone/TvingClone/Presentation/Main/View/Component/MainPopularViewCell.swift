@@ -78,7 +78,7 @@ extension MainPopularViewCell {
     
     func setLayout() {
         mainPopularPoster.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
+            $0.top.leading.equalToSuperview()
             $0.width.equalTo(160)
             $0.height.equalTo(80)
         }

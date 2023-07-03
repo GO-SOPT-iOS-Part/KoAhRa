@@ -50,7 +50,7 @@ final class MainMustSeeViewController: UIViewController {
      func setLayout() {
          mainMustSeeView.snp.makeConstraints {
              $0.top.trailing.equalToSuperview()
-             $0.leading.equalToSuperview().inset(15)
+             $0.leading.equalToSuperview()
              $0.height.equalTo(300)
          }
      }

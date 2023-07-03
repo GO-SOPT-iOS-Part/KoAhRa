@@ -12,7 +12,7 @@ import Then
 
 final class MainFreeViewCell: UICollectionViewCell {
     
-    static let identifier = "MainPopularViewCell"
+    static let identifier = "MainFreeViewCell"
     
     private let mainFreePoster = UIImageView()
     private let mainFreeName = UILabel()
@@ -57,7 +57,7 @@ extension MainFreeViewCell {
     
     func setLayout() {
         mainFreePoster.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
+            $0.top.leading.equalToSuperview()
             $0.width.equalTo(98)
             $0.height.equalTo(146)
         }
