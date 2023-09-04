@@ -32,6 +32,7 @@
 		A4153E2A2A0DE14B00C5C521 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E292A0DE14B00C5C521 /* MovieViewController.swift */; };
 		A4153E2C2A0DE29200C5C521 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4153E2B2A0DE29200C5C521 /* MovieTableViewCell.swift */; };
 		A428CB212A9E3ED7009FA0FB /* OpeanWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428CB202A9E3ED7009FA0FB /* OpeanWeatherView.swift */; };
+		A428CB232A9E436B009FA0FB /* OpenWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A428CB222A9E436B009FA0FB /* OpenWeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		A4153E292A0DE14B00C5C521 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		A4153E2B2A0DE29200C5C521 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		A428CB202A9E3ED7009FA0FB /* OpeanWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeanWeatherView.swift; sourceTree = "<group>"; };
+		A428CB222A9E436B009FA0FB /* OpenWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			children = (
 				A4153E202A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift */,
 				A428CB202A9E3ED7009FA0FB /* OpeanWeatherView.swift */,
+				A428CB222A9E436B009FA0FB /* OpenWeatherViewModel.swift */,
 				A4153E1E2A09DFE200C5C521 /* OpenWeatherViewController.swift */,
 			);
 			path = OpenWeather;
@@ -299,6 +302,7 @@
 				A428CB212A9E3ED7009FA0FB /* OpeanWeatherView.swift in Sources */,
 				A4153E132A09357B00C5C521 /* SignUpResponse.swift in Sources */,
 				A4153DE82A092A7900C5C521 /* SceneDelegate.swift in Sources */,
+				A428CB232A9E436B009FA0FB /* OpenWeatherViewModel.swift in Sources */,
 				A4153E212A0BC8C300C5C521 /* OpenWeatherTableViewCell.swift in Sources */,
 				A4153E1B2A09DCF600C5C521 /* OpenWeatherResponse.swift in Sources */,
 			);
