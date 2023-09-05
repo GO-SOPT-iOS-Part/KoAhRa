@@ -7,59 +7,49 @@
 
 import UIKit
 
-import SnapKit
-import Then
-
 final class OpenWeatherViewController: UIViewController {
     
-    private let tableView = UITableView()
-    private var weatherData: [OpenWeatherResponse] = []
-    
+    private let openWeatherView = OpenWeatherView()
+    private lazy var openWeatherTableView = openWeatherView.tableView
+    private var weatherListViewModel = WeatherListViewModel()
     
     private let cityName = ["gongju", "gwangju", "gumi", "gunsan", "daegu", "daejeon", "mokpo", "busan", "seosan", "seoul", "sokcho", "suwon", "suncheon", "ulsan", "iksan", "jeonju", "jeju", "cheonan", "cheongju", "chuncheon"]
+    
+    override func loadView() {
+        super.loadView()
+        self.view = openWeatherView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         openWeather()
-        setRegister()
-        setLayout()
+        setDelegate()
+    }
+}
+
+private extension OpenWeatherViewController {
+    func setDelegate() {
+        openWeatherTableView.delegate = self
+        openWeatherTableView.dataSource = self
     }
     
-    private func openWeather() {
-        
+    func openWeather() {
         cityName.forEach {
             OpenWeatherService.shared.openWeather(place: $0) { response in
                 switch response {
                 case .success(let data) :
-                    self.weatherData.append(data as! OpenWeatherResponse)
-                    self.tableView.reloadData()
+                    if let openWeatherResponse = data as? OpenWeatherResponse {
+                        let weatherResponse = convertToWeatherResponse(from: openWeatherResponse)
+                        self.weatherListViewModel.addWeatherData(weatherResponse)
+                    }
+                    self.openWeatherTableView.reloadData()
                 default :
                     break
                 }
             }
         }
     }
-
-    private func setRegister() {
-        tableView.do {
-            $0.register(OpenWeatherTableViewCell.self, forCellReuseIdentifier: OpenWeatherTableViewCell.identifier)
-            $0.rowHeight = 120
-            $0.delegate = self
-            $0.dataSource = self
-        }
-        
-    }
-    
-    private func setLayout() {
-        view.addSubview(tableView)
-        
-        tableView.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaInsets)
-            $0.bottom.leading.trailing.equalToSuperview()
-        }
-    }
-    
 }
 
 extension OpenWeatherViewController: UITableViewDelegate {}
@@ -67,16 +57,16 @@ extension OpenWeatherViewController: UITableViewDelegate {}
 extension OpenWeatherViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cityName.count
+        return weatherListViewModel.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: OpenWeatherTableViewCell.identifier, for: indexPath) as? OpenWeatherTableViewCell else { return UITableViewCell() }
         
-        if (weatherData.count == cityName.count) {
-            cell.configureCell(weatherData[indexPath.row])
+        if (weatherListViewModel.numberOfSections == cityName.count) {
+            let weatherViewModel = weatherListViewModel.weatherListData[indexPath.row]
+            cell.configureCell(weatherViewModel)
         }
-        
         return cell
     }
 }

@@ -74,18 +74,11 @@ final class OpenWeatherTableViewCell: UITableViewCell {
         
     }
     
-    func configureCell(_ weather : OpenWeatherResponse) {
-        if let imageURL = weather.weather.first?.icon {
-            weatherImage.getImageFromURL(imageURL)
-        }
-        
+    func configureCell(_ weather : WeatherResponse) {
+        let imageURL = weather.icon
+        weatherImage.getImageFromURL(imageURL)
         cityNameLabel.text = weather.name
-        
-        let temp  = String(weather.main.temp)
-        cityTempLabel.text = "현재 온도 : " + temp + "°C"
-        
-        let humidity  = String(weather.main.humidity)
-        cityHumidLabel.text = "습도 : " + humidity + "%"
-        
+        cityTempLabel.text = "현재 온도 : \(weather.temp)°C"
+        cityHumidLabel.text = "습도 : \(weather.humidity)%"
     }
 }
